@@ -1,0 +1,35 @@
+---
+const { title, description, image, screenshot } = Astro.props;
+---
+
+<aside>
+  <img src={image} alt={title} />
+  <h3>{title}</h3>
+  <p>{description}</p>
+</aside>
+<div><img src={screenshot} alt={title} /></div>
+
+<style>
+  aside {
+    width: 100%;
+  }
+  aside img {
+    max-height: 250px;
+  }
+  img {
+    border-radius: 4px;
+  }
+  div {
+    display: none;
+  }
+  @media screen and (min-width: 992px) {
+    aside {
+      width: 25%;
+    }
+    div {
+      display: block;
+      width: 75%;
+    }
+  }
+
+</style>

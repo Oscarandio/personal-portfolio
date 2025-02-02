@@ -1,0 +1,40 @@
+---
+import WorkProps from './WorkProps.astro';
+---
+
+<h2>Featured Work</h2>
+
+<section id='work'>
+  <WorkProps
+    image='/profile.jpg'
+    title='Vilatijolo'
+    description='Descripción proyecto'
+    screenshot='/profile.jpg'
+  />
+</section>
+<section>
+  <WorkProps
+    image='/profile.jpg'
+    title='Vilatijolo'
+    description='Descripción proyecto'
+    screenshot='/profile.jpg'
+  />
+</section>
+<style>
+  @media screen and (min-width: 992px) {
+    h2 {
+      margin: 0 auto;
+      text-align: center;
+      width: 160px;
+    }
+  }
+  h2:after {
+    width: 155px;
+  }
+  section {
+    display: flex;
+    gap: 40px;
+    margin-block: 1.5rem;
+    max-width: 100%;
+  }
+</style>

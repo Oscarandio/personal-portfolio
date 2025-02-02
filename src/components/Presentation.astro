@@ -1,18 +1,57 @@
 ---
-
+const name = 'Óscar Rabadán';
+const description =
+  'a Frontend developer with over 3 years of experience, I like to keep up to date with the latest industry trends and continuously improve my knowledge. Focused on creating responsive and high-performance web applications with great attention to detail.';
+const profilePicture = '/profile.jpg';
 ---
 
 <section>
   <div>
-    <h1>Frontend Developer</h1>
-    <h2>Mi nombre es Óscar Rabadán</h2>
+    <h1>I am {name},</h1>
+    <p>
+      {description}
+    </p>
+  </div>
+  <div>
+    <img src={profilePicture} alt='{name}' />
   </div>
 </section>
 <style>
   section {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     height: 60vh;
     min-height: 500px;
+  }
+  section div:last-of-type {
+    text-align: center;
+    width: 100%;
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      flex-wrap: nowrap;
+    }
+  }
+  h1 {
+    max-width: 375px;
+    position: relative;
+  }
+  h1:after {
+    background-color: rgb(151 159 206 / 40%);
+    bottom: 5px;
+    box-shadow: rgb(151 159 206) 0px 0px 8px;
+    content: '';
+    height: 15px;
+    left: 8px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  img {
+    object-fit: cover;
+    border-radius: 10px;
+    height: 100%;
+    width: 250px;
   }
 </style>
