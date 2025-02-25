@@ -7,3 +7,31 @@
   <span class='line'></span>
   <span class='line'></span>
 </div>
+
+<style>
+  .hamburger {
+    flex-direction: column;
+    display: flex;
+    align-items: end;
+    cursor: pointer;
+    padding-right: 1rem;
+    padding-block: 18px;
+  }
+  @media (min-width: 636px) {
+    .hamburger {
+      padding-right: 2rem;
+    }
+  }
+  .hamburger .line {
+    background-color: black;
+    display: block;
+    height: 3px;
+    margin-block: 4px;
+    width: 36px;
+  }
+  @media (min-width: 992px) {
+    .hamburger {
+      display: none;
+    }
+  }
+</style>

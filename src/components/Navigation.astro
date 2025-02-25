@@ -2,7 +2,7 @@
 
 ---
 
-<div class='nav-links'>
+<div id='nav-links'>
   <a href='/'>Home</a>
   <a href='/works'>Featured Work</a>
   <a href='/toolkit'>Toolkit</a>
@@ -10,3 +10,34 @@
   <a href='#about'>About Me</a>
   <a href='#contact'>Contact</a>
 </div>
+<style>
+  /* estilos de la barra de navegación*/
+  
+  #nav-links {
+    background-color: var(--primary-color);
+    margin: 0;
+    padding-block: 0.2em;
+    width: 100%;
+
+    display: none;
+    left: 48px;
+    top: 5rem;
+  }
+  #nav-links a {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 10px 0;
+    text-align: center;
+  }
+  @media (min-width: 992px) {
+    #nav-links {
+      display: block;
+      text-align: center;
+    }
+    #nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+  }
+</style>

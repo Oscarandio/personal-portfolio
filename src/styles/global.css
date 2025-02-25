@@ -5,7 +5,6 @@
   font-weight: normal;
   src: url('/fonts/Karla.ttf') format('truetype');
 }
-
 :root {
   --main-bg-color: #f4f2ee;
   --primary-color: #b3b8d8;
@@ -24,7 +23,7 @@ body {
 main {
   padding: 1rem;
 }
-@media screen and (min-width: 636px) {
+@media (min-width: 636px) {
   main {
     padding: 2rem;
   }
@@ -42,16 +41,13 @@ a {
   text-decoration: none;
 }
 img {
+  height: 100%;
   object-fit: cover;
   width: 100%;
 }
 ::selection {
   background-color: var(--primary-color);
   color: var(--text-color);
-}
-h1 {
-  font-size: 2.5rem;
-  margin: 1rem 0;
 }
 h2 {
   position: relative;
@@ -67,55 +63,7 @@ h2:after {
   z-index: -1;
 }
 p {
-  font-size: 1.2rem;
-}
-/* estilos de la barra de navegación*/
-/* .hamburger {
-    cursor: pointer;
-    padding-right: 20px;
-  }
-.hamburger .line {
-    background-color: #ff9776;
-    display: block;
-    height: 5px;
-    margin-bottom: 10px;
-    width: 40px;
-  } */
-.nav-links {
-  background-color: var(--primary-color);
-  margin: 0;
-  padding-block: 1em;
-  width: 100%;
-
-  /* display: none; */
-  /* left: 48px; */
-  /* top: 5rem; */
-}
-.nav-links a {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 10px 0;
-  text-align: center;
-}
-/* .expanded {
-    display: unset;
-  } */
-@media screen and (min-width: 636px) {
-  .nav-links {
-    background: none;
-    display: block;
-    position: static;
-    text-align: center;
-    width: auto;
-  }
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
-  /* .hamburger {
-      display: none;
-    } */
+  font-size: clamp(1.1rem, 4vw, 1.2rem);
 }
 html.dark {
   background-color: #0d0950;
