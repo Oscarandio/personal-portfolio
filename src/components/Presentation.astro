@@ -1,7 +1,8 @@
 ---
 const name = 'Óscar Rabadán';
 const description =
-  'a Frontend developer with over 3 years of experience, I like to keep up to date with the latest industry trends and continuously improve my knowledge. Focused on creating responsive and high-performance web applications with great attention to detail.';
+  'Frontend developer with over 3 years of experience, I like to keep up to date with the latest industry trends and continuously improve my knowledge. Focused on creating responsive and high-performance web applications with great attention to detail.';
+const goToWork = 'You can check some of my works here.';
 const profilePicture = '/profile.jpg';
 ---
 
@@ -11,26 +12,39 @@ const profilePicture = '/profile.jpg';
     <p>
       {description}
     </p>
+    <p>
+      <a title='' href='/works'><strong>{goToWork}</strong></a>
+    </p>
   </div>
   <div>
-    <img src={profilePicture} alt='{name}' />
+    <img src={profilePicture} alt={name} />
   </div>
 </section>
+
 <style>
+  h1 {
+    display: none;
+  }
   section {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    height: 70dvh;
-    min-height: 500px;
+    /* height: 70dvh;
+    min-height: 500px; */
   }
   section div:last-of-type {
     text-align: center;
     width: 100%;
   }
   @media screen and (min-width: 992px) {
+    h1 {
+      display: block;
+    }
     section {
+      border-radius: 5px;
       flex-wrap: nowrap;
+      border: 1px solid var(--text-color);
+      padding: 1rem;
     }
   }
   h1 {
@@ -58,6 +72,17 @@ const profilePicture = '/profile.jpg';
     }
   }
   img {
-    border-radius: 10px;
+    display: none;
+  }
+  @media screen and (min-width: 992px) {
+    img {
+      border-radius: 4px;
+      display: block;
+    }
+  }
+  a {
+    /* background-color: var(--primary-color); */
+    font-size: 1.1rem;
+    text-decoration: underline;
   }
 </style>

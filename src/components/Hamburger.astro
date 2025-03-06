@@ -1,18 +1,45 @@
 ---
-
+const profilePicture = '/profile.jpg';
+const name = 'Óscar Rabadán';
 ---
 
-<div class='hamburger'>
-  <span class='line'></span>
-  <span class='line'></span>
-  <span class='line'></span>
-</div>
+<nav>
+  <a href='/'>
+    <div id='mobile-profilePicture'>
+      <img src={profilePicture} alt={name} />
+    </div>
+  </a>
+  <a href='/'><h1>{name}</h1></a>
 
+  <div class='hamburger'>
+    <span class='line'></span>
+    <span class='line'></span>
+    <span class='line'></span>
+  </div>
+</nav>
 <style>
-  .hamburger {
-    flex-direction: column;
+  nav {
+    align-items: center;
     display: flex;
-    align-items: end;
+    justify-content: space-between;
+  }
+  #mobile-profilePicture {
+    display: flex;
+    align-items: center;
+  }
+  #mobile-profilePicture img {
+    border-radius: 10px;
+    object-fit: cover;
+    padding: 6px;
+    max-height: 64px;
+    width: 100%;
+  }
+  /* p {
+    font-size: 1.6rem;
+    line-height: 0;
+    font-weight: 700;
+  } */
+  .hamburger {
     cursor: pointer;
     padding-right: 1rem;
     padding-block: 18px;
@@ -30,7 +57,11 @@
     width: 36px;
   }
   @media (min-width: 992px) {
-    .hamburger {
+    h1 {
+      display: none;
+    }
+    .hamburger,
+    #mobile-profilePicture {
       display: none;
     }
   }

@@ -23,7 +23,7 @@ body {
 main {
   padding: 1rem;
 }
-@media (min-width: 636px) {
+@media (min-width: 992px) {
   main {
     padding: 2rem;
   }

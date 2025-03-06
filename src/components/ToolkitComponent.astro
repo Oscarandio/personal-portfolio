@@ -1,10 +1,9 @@
 ---
 import '../styles/global.css';
 import 'devicon/devicon.min.css';
-const array = ['1', '2', '3'];
 ---
 
-<section id='toolkit'>
+<section>
   <h2>Toolkit</h2>
   <div>
     <ul>
@@ -34,6 +33,7 @@ const array = ['1', '2', '3'];
   h2:after {
     width: 70px;
   }
+
   section div {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -42,6 +42,12 @@ const array = ['1', '2', '3'];
   @media screen and (min-width: 768px) {
     section div {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    section {
+      margin-block: 36px;
     }
   }
 
