@@ -1,4 +1,5 @@
 ---
+
 const name = 'Óscar Rabadán';
 const description =
   'Frontend developer with over 3 years of experience, I like to keep up to date with the latest industry trends and continuously improve my knowledge. Focused on creating responsive and high-performance web applications with great attention to detail.';
@@ -6,9 +7,16 @@ const goToWork = 'You can check some of my works here.';
 const profilePicture = '/profile.jpg';
 ---
 
-<section>
+<section class='flex items-center justify-center gap-8 my-16'>
+
+  <div class='h-24 w-24'>
+    <img class='rounded-full' src={profilePicture} alt={name} />
+  </div>
+  <h1>I am {name}</h1>
+</section>
+<section
+  class='bg-white lg:p-8 rounded-ss-3xl rounded-se-3xl rounded-e-lg rounded-s-lg'>
   <div>
-    <h1>I am {name},</h1>
     <p>
       {description}
     </p>
@@ -16,41 +24,26 @@ const profilePicture = '/profile.jpg';
       <a title='' href='/works'><strong>{goToWork}</strong></a>
     </p>
   </div>
-  <div>
-    <img src={profilePicture} alt={name} />
-  </div>
 </section>
 
 <style>
   h1 {
+    color: var(--text-color-bold);
     display: none;
   }
-  section {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    /* height: 70dvh;
-    min-height: 500px; */
-  }
-  section div:last-of-type {
-    text-align: center;
-    width: 100%;
+  p {
+    color: var(--text-color-light);
+    font-size: 1rem;
   }
   @media screen and (min-width: 992px) {
     h1 {
       display: block;
     }
-    section {
-      border-radius: 5px;
-      flex-wrap: nowrap;
-      border: 1px solid var(--text-color);
-      padding: 1rem;
-    }
   }
   h1 {
-    max-width: 375px;
-    position: relative;
-    font-size: 1.5rem;
+    color: white;
+    font-size: 2.25rem;
+    font-weight: 600;
     margin: 1rem 0;
   }
   @media (min-width: 480px) {
@@ -58,31 +51,17 @@ const profilePicture = '/profile.jpg';
       font-size: 2.5rem;
     }
   }
-  @media screen and (min-width: 480px) {
-    h1:after {
-      background-color: rgb(151 159 206 / 40%);
-      bottom: 5px;
-      box-shadow: rgb(151 159 206) 0px 0px 8px;
-      content: '';
-      height: 15px;
-      left: 8px;
-      position: absolute;
-      width: 100%;
-      z-index: -1;
-    }
-  }
   img {
     display: none;
   }
   @media screen and (min-width: 992px) {
     img {
-      border-radius: 4px;
       display: block;
     }
   }
   a {
-    /* background-color: var(--primary-color); */
-    font-size: 1.1rem;
+    color: var(--text-color-bold);
     text-decoration: underline;
+    font-weight: 300;
   }
 </style>
