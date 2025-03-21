@@ -1,67 +1,25 @@
----
-
-const name = 'Óscar Rabadán';
-const description =
-  'Frontend developer with over 3 years of experience, I like to keep up to date with the latest industry trends and continuously improve my knowledge. Focused on creating responsive and high-performance web applications with great attention to detail.';
-const goToWork = 'You can check some of my works here.';
-const profilePicture = '/profile.jpg';
----
-
-<section class='flex items-center justify-center gap-8 my-16'>
-
-  <div class='h-24 w-24'>
-    <img class='rounded-full' src={profilePicture} alt={name} />
+<section class='w-full xl:w-8/12 2xl:w-6/12 mx-auto pt-4'>
+  <div class='hidden lg:flex items-center justify-start gap-8 mt-12 mb-8'>
+    <div class='h-32 w-32'>
+      <img class='rounded-full' src='/profile.jpg' alt='Óscar Rabadán' />
+    </div>
+    <div>
+      <h1 class='font-semibold text-4xl'>I am Óscar Rabadán</h1>
+      <h2 class='font-light text-2xl text-bold'>Frontend Developer</h2>
+    </div>
   </div>
-  <h1>I am {name}</h1>
-</section>
-<section
-  class='bg-white lg:p-8 rounded-ss-3xl rounded-se-3xl rounded-e-lg rounded-s-lg'>
-  <div>
+  <div
+    class='text-lg px-3 lg:px-0 pb-8 lg:rounded-e-lg lg:rounded-s-lg rounded-ss-2xl rounded-se-2xl lg:rounded-ss-3xl lg:rounded-se-3xl mt-6 lg:mt-0'>
     <p>
-      {description}
+      Frontend developer with over 3 years of experience, I like to keep up to
+      date with the latest industry trends and continuously improve my
+      knowledge. Focused on creating responsive and high-performance web
+      applications with great attention to detail.
     </p>
-    <p>
-      <a title='' href='/works'><strong>{goToWork}</strong></a>
+    <p class='mt-4 font-medium underline'>
+      <a title='' href='/works'
+        >You can check some of my works here.</a
+      >
     </p>
   </div>
 </section>
-
-<style>
-  h1 {
-    color: var(--text-color-bold);
-    display: none;
-  }
-  p {
-    color: var(--text-color-light);
-    font-size: 1rem;
-  }
-  @media screen and (min-width: 992px) {
-    h1 {
-      display: block;
-    }
-  }
-  h1 {
-    color: white;
-    font-size: 2.25rem;
-    font-weight: 600;
-    margin: 1rem 0;
-  }
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 2.5rem;
-    }
-  }
-  img {
-    display: none;
-  }
-  @media screen and (min-width: 992px) {
-    img {
-      display: block;
-    }
-  }
-  a {
-    color: var(--text-color-bold);
-    text-decoration: underline;
-    font-weight: 300;
-  }
-</style>

@@ -1,78 +1,98 @@
 ---
-import '../styles/global.css';
 import 'devicon/devicon.min.css';
+import { SKILLS } from '@/consts/skills';
+
+const firstCard = SKILLS.slice(0, 6);
+const secondCard = SKILLS.slice(6, 14);
+const thirdCard = SKILLS.slice(14, 19);
+const fourthCard = SKILLS.slice(19, 23);
 ---
 
-<section>
+<section class='w-full xl:w-8/12 2xl:w-6/12 mx-auto'>
   <!-- <h2>Toolkit</h2> -->
-  <div>
-    <ul>
-      <li><i class='devicon-react-plain colored'></i>React</li>
-      <li><i class='devicon-nextjs-plain colored'></i>NextJS</li>
-      <li><i class='devicon-redux-plain colored'></i>Redux</li>
-      <li><i class='devicon-astro-plain colored'></i>Astro</li>
-    </ul>
-    <ul>
-      <li><i class='devicon-html5-plain colored'></i>HTML</li>
-      <li><i class='devicon-css3-plain colored'></i>CSS</li>
-      <li><i class='devicon-sass-plain colored'></i>Sass</li>
-      <li><i class='devicon-bootstrap-plain colored'></i>Bootstrap</li>
-      <li><i class='devicon-tailwindcss-plain colored'></i>Tailwind CSS</li>
-      <li><i class='devicon-figma-plain colored'></i>Figma</li>
-    </ul>
+  <div class='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+    <div
+      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'>
+      <h2 class='font-medium text-xl'>Languages</h2>
+      <ul class='pt-4'>
+        {
+          firstCard.map(({ id, name }) => (
+            <li>
+              <i class={`devicon-${id}-plain colored`} />
+              {name}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div
+      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'>
+      <h2 class='font-medium text-xl'>Frameworks and Libraries</h2>
+      <ul class='pt-4'>
+        {
+          secondCard.map(({ id, name }) => (
+            <li>
+              <i class={`devicon-${id}-plain colored`} />
+              {name}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
 
-    <ul>
-      <li><i class='devicon-javascript-plain colored'></i>Javascript</li>
-      <li><i class='devicon-typescript-plain colored'></i>Typescript</li>
-      <li><i class='devicon-jquery-plain colored'></i>jQuery</li>
-      <!-- <li><i class='devicon-php-plain colored'></i>PHP</li> -->
-    </ul>
+    <div
+      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'>
+      <h2 class='font-medium text-xl'>Clouds and Providers</h2>
+      <ul class='pt-4'>
+        {
+          thirdCard.map(({ id, name }) => (
+            <li>
+              <i class={`devicon-${id}-plain colored`} />
+              {name}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div
+      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'>
+      <h2 class='font-medium text-xl'>Tools</h2>
+      <ul class='pt-4'>
+        {
+          fourthCard.map(({ id, name }) => (
+            <li>
+              <i
+                class={`devicon-${id}-plain ${id === 'notion' ? '' : 'colored'}`}
+              />
+              {name}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
 </section>
 <style>
-  h2:after {
-    width: 70px;
-  }
-
-  section div {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-  }
-  @media screen and (min-width: 768px) {
-    section div {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  @media screen and (min-width: 992px) {
-    section {
-      margin-block: 1rem;
-    }
-  }
-
   ul {
-    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     list-style: none;
-    padding: 0.2rem 1rem;
-    border-radius: 12px;
     margin-block: 0;
   }
 
-  ul:nth-of-type(1) {
-    border-bottom-left-radius: 36px;
-  }
-  ul:nth-of-type(3) {
-    border-bottom-right-radius: 36px;
-  }
   li {
+    background-color: rgb(255 255 255 / 85%);
     display: flex;
     align-items: center;
     color: var(--text-color-bold);
-    margin: 1rem 0;
+    font-size: 0.9rem;
+    width: fit-content;
+    padding: 6px 12px;
+    border-radius: 6px;
   }
   i {
-    font-size: 1.8rem;
-    margin-right: 0.8rem;
+    font-size: 1.4rem;
+    margin-right: 0.3rem;
   }
 </style>

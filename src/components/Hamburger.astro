@@ -1,17 +1,12 @@
----
-const profilePicture = '/profile.jpg';
-const name = 'Óscar Rabadán';
----
-
-<nav>
+<nav class='flex items-center justify-between mx-3 rounded-lg lg:hidden'>
   <a href='/'>
-    <div id='mobile-profilePicture'>
-      <img src={profilePicture} alt={name} />
+    <div class='flex items-center h-16 w-16'>
+      <img class='p-2 rounded-xl' src='/profile.jpg' alt='Óscar Rabadán' />
     </div>
   </a>
-  <a href='/'><h1>{name}</h1></a>
+  <a href='/'><h1 class='block lg:hidden'>Óscar Rabadán</h1></a>
 
-  <div class='hamburger'>
+  <div class='hamburger cursor-pointer p-3 lg:hidden'>
     <span class='line'></span>
     <span class='line'></span>
     <span class='line'></span>
@@ -19,50 +14,15 @@ const name = 'Óscar Rabadán';
 </nav>
 <style>
   nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-  #mobile-profilePicture {
-    display: flex;
-    align-items: center;
-  }
-  #mobile-profilePicture img {
-    border-radius: 10px;
-    object-fit: cover;
-    padding: 6px;
-    max-height: 64px;
-    width: 100%;
-  }
-  /* p {
-    font-size: 1.6rem;
-    line-height: 0;
-    font-weight: 700;
-  } */
-  .hamburger {
-    cursor: pointer;
-    padding-right: 1rem;
-    padding-block: 18px;
-  }
-  @media (min-width: 636px) {
-    .hamburger {
-      padding-right: 2rem;
-    }
+    background-color: rgb(var(--color-primary-rgb) / 80%);
+    filter: blur(0.5px);
+    backdrop-filter: blur(10px);
   }
   .hamburger .line {
-    background-color: black;
+    background-color: white;
     display: block;
-    height: 3px;
-    margin-block: 4px;
-    width: 36px;
-  }
-  @media (min-width: 992px) {
-    h1 {
-      display: none;
-    }
-    .hamburger,
-    #mobile-profilePicture {
-      display: none;
-    }
+    height: 2px;
+    margin-block: 6px;
+    width: 32px;
   }
 </style>

@@ -1,42 +1,86 @@
 ---
+import ThemeIcon from './ThemeIcon.astro';
 
+const profilePicture = '/profile.jpg';
+const name = 'Óscar Rabadán';
 ---
 
-<div id='nav-links'>
-  <a href='/'>Home</a>
-  <a href='/works'>Featured Work</a>
-  <!-- <a href='#'>Resources</a>
+<div class='m-0 py-1 px-6 w-full rounded-2xl' id='nav-links'>
+  <div class='name flex items-center gap-2'>
+    <a href='/'>
+      <div class='flex items-center h-12 w-12'>
+        <img class='p-2 rounded-xl' src={profilePicture} alt={name} />
+      </div>
+    </a>
+    Óscar Rabadán
+  </div>
+  <ul>
+    <li><a href='/'>Home</a></li>
+    <li><a href='#work'>Featured Work</a></li>
+    <!-- <a href='#'>Resources</a>
   <a href='#about'>About Me</a> -->
-  <a href='/contact'>Contact</a>
-</div>
-<style>
-  /* estilos de la barra de navegación*/
-  
-  #nav-links {
-    background-color: var(--primary-color);
-    margin: 0;
-    padding-block: 0.2em;
-    width: 100%;
+    <li><a href='/contact'>Contact</a></li>
+  </ul>
+  <div>
+    <ThemeIcon />
+  </div>
 
-    display: none;
-    left: 48px;
-    top: 5rem;
-  }
-  #nav-links a {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 10px 0;
-    text-align: center;
-  }
-  @media (min-width: 992px) {
+  <style>
+    /* estilos de la barra de navegación*/
+
     #nav-links {
+      background-color: rgb(var(--color-primary-rgb) / 70%);
+      display: none;
+      left: 48px;
+      top: 5rem;
+      filter: blur(0.5px);
+      backdrop-filter: blur(10px);
+      align-items: center;
+      animation: header-change-justify 0.3s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 250px;
+    }
+
+    @keyframes header-change-justify {
+      0% {
+        justify-content: space-between;
+      }
+
+      100% {
+        justify-content: space-between;
+      }
+    }
+
+    #nav-links .name {
+      animation: header-show-name 0.3s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 250px;
+    }
+
+    @keyframes header-show-name {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 100%;
+      }
+    }
+    #nav-links li {
       display: block;
-      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 10px 0;
     }
-    #nav-links a {
-      display: inline-block;
-      padding: 15px 20px;
+
+    @media (min-width: 992px) {
+      #nav-links {
+        display: flex;
+      }
+      #nav-links li {
+        display: inline-block;
+        padding: 15px 20px;
+      }
     }
-  }
-</style>
+  </style>
+</div>
