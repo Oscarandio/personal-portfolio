@@ -1,0 +1,48 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+import Input from '@/components/ui/Input.astro';
+---
+
+<div class='w-full xl:w-8/12 2xl:w-6/12 mx-auto' id='contact'>
+  <div class='bg-white p-8 rounded-lg shadow-lg'>
+    <!-- This form uses FabForm.io for submission -->
+    <form
+      action='https://fabform.io/f/xxxxx'
+      method='post'
+      class='form-container'>
+      <div class='flex gap-5 w-full'>
+        <Input id='name' type='text' placeholder={t('form.name')} />
+        <Input id='email' type='text' placeholder={t('form.email')} />
+      </div>
+      <Input id='subject' type='text' placeholder={t('form.subject')} />
+      <textarea id='message' rows='5' placeholder={t('form.message')} required
+      ></textarea>
+      <button class='bg-primary border-0 py-2 px-8 rounded cursor-pointer' type='submit'
+        >{t('form.send')}</button
+      >
+    </form>
+  </div>
+</div>
+<style>
+  textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #1b1f23;
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+  }
+  textarea::placeholder {
+    color: #5c6675;
+  }
+  button {
+    transition: opacity 0.3s ease;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+</style>

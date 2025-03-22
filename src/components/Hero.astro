@@ -1,25 +1,27 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section class='w-full xl:w-8/12 2xl:w-6/12 mx-auto pt-4'>
   <div class='hidden lg:flex items-center justify-start gap-8 mt-12 mb-8'>
     <div class='h-32 w-32'>
       <img class='rounded-full' src='/profile.jpg' alt='Óscar Rabadán' />
     </div>
     <div>
-      <h1 class='font-semibold text-4xl'>I am Óscar Rabadán</h1>
-      <h2 class='font-light text-2xl text-bold'>Frontend Developer</h2>
+      <h1 class='font-semibold text-5xl'>Óscar Rabadán</h1>
+      <h2 class='font-bold text-2xl text-bold'>{t('hero.job')}</h2>
     </div>
   </div>
   <div
     class='text-lg px-3 lg:px-0 pb-8 lg:rounded-e-lg lg:rounded-s-lg rounded-ss-2xl rounded-se-2xl lg:rounded-ss-3xl lg:rounded-se-3xl mt-6 lg:mt-0'>
     <p>
-      Frontend developer with over 3 years of experience, I like to keep up to
-      date with the latest industry trends and continuously improve my
-      knowledge. Focused on creating responsive and high-performance web
-      applications with great attention to detail.
+      {t('hero.desc')}
     </p>
     <p class='mt-4 font-medium underline'>
-      <a title='' href='/works'
-        >You can check some of my works here.</a
-      >
+      <a title='' href='#works'>{t('hero.link')}</a>
     </p>
   </div>
 </section>

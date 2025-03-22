@@ -1,27 +1,38 @@
 ---
-import ThemeIcon from './ThemeIcon.astro';
+import LanguagePicker from '@/components/LanguagePicker.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
-const profilePicture = '/profile.jpg';
-const name = 'Óscar Rabadán';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+ import ThemeIcon from './ThemeIcon.astro';
 ---
 
-<div class='m-0 py-1 px-6 w-full rounded-2xl' id='nav-links'>
-  <div class='name flex items-center gap-2'>
-    <a href='/'>
-      <div class='flex items-center h-12 w-12'>
-        <img class='p-2 rounded-xl' src={profilePicture} alt={name} />
+<div
+  class='flex justify-between m-0 py-1 px-6 w-full rounded-2xl'
+  id='nav-links'>
+  <a href='/'>
+    <div class='name flex items-center gap-2'>
+      <div class='flex items-center'>
+        <div class='h-12 w-12'>
+          <img
+            class='p-2 rounded-xl'
+            src='/profile.jpg'
+            alt='Foto de perfil de Óscar Rabadán'
+          />
+        </div>
+        <p>Óscar Rabadán</p>
       </div>
-    </a>
-    Óscar Rabadán
-  </div>
+    </div>
+  </a>
   <ul>
-    <li><a href='/'>Home</a></li>
-    <li><a href='#work'>Featured Work</a></li>
+    <li><a href='/'>{t('nav.home')}</a></li>
+    <li><a href='#work'> {t('nav.work')}</a></li>
     <!-- <a href='#'>Resources</a>
   <a href='#about'>About Me</a> -->
-    <li><a href='/contact'>Contact</a></li>
+    <li><a href='#contact'> {t('nav.contact')}</a></li>
   </ul>
-  <div>
+  <div class="flex items-center gap-8">
+    <LanguagePicker />
     <ThemeIcon />
   </div>
 
@@ -36,19 +47,6 @@ const name = 'Óscar Rabadán';
       filter: blur(0.5px);
       backdrop-filter: blur(10px);
       align-items: center;
-      animation: header-change-justify 0.3s linear both;
-      animation-timeline: scroll();
-      animation-range: 0 250px;
-    }
-
-    @keyframes header-change-justify {
-      0% {
-        justify-content: space-between;
-      }
-
-      100% {
-        justify-content: space-between;
-      }
     }
 
     #nav-links .name {

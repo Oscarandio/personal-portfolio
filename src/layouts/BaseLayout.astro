@@ -8,9 +8,14 @@ import DotBackground from '../components/DotBackground.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+
 ---
 
-<html lang='es'>
+<html lang={lang}>
   <head>
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
@@ -19,7 +24,7 @@ import '../styles/global.css';
   </head>
   <body>
     <Header />
-    <main class="p-3">
+    <main class='px-4'>
       <DotBackground />
       <slot />
     </main>
