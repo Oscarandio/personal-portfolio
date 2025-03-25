@@ -4,7 +4,7 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
- import ThemeIcon from './ThemeIcon.astro';
+//  import ThemeIcon from './ThemeIcon.astro';
 ---
 
 <div
@@ -33,7 +33,7 @@ const t = useTranslations(lang);
   </ul>
   <div class="flex items-center gap-8">
     <LanguagePicker />
-    <ThemeIcon />
+    <!-- <ThemeIcon /> -->
   </div>
 
   <style>
