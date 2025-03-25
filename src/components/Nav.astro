@@ -10,7 +10,7 @@ const t = useTranslations(lang);
 <div
   class='flex justify-between m-0 py-1 px-6 w-full rounded-2xl'
   id='nav-links'>
-  <a href='/'>
+  <a href='#bio'>
     <div class='name flex items-center gap-2'>
       <div class='flex items-center'>
         <div class='h-12 w-12'>
@@ -25,7 +25,7 @@ const t = useTranslations(lang);
     </div>
   </a>
   <ul>
-    <li><a href='/'>{t('nav.home')}</a></li>
+    <li><a href='#bio'>{t('nav.home')}</a></li>
     <li><a href='#work'> {t('nav.work')}</a></li>
     <!-- <a href='#'>Resources</a>
   <a href='#about'>About Me</a> -->
@@ -42,9 +42,6 @@ const t = useTranslations(lang);
     #nav-links {
       background-color: rgb(var(--color-primary-rgb) / 70%);
       display: none;
-      left: 48px;
-      top: 5rem;
-      filter: blur(0.5px);
       backdrop-filter: blur(10px);
       align-items: center;
     }

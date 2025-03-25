@@ -12,3 +12,25 @@ import Contact from '@/components/Contact.astro';
   <Work />
   <Contact />
 </BaseLayout>
+
+<script>
+  document
+    .querySelectorAll<HTMLAnchorElement>('a[href^="#"]')
+    .forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = (this as HTMLAnchorElement)
+          .getAttribute('href')
+          ?.substring(1);
+        const targetElement = document.getElementById(targetId || '');
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      });
+    });
+</script>
