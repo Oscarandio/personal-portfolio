@@ -74,8 +74,8 @@ export const SKILLS: Skills[] = [
     name: 'Supabase',
 },
 {
-    id: 'firabase',
-    name: 'Firabase',
+    id: 'firebase',
+    name: 'Firebase',
 },
 {
     id: 'figma',

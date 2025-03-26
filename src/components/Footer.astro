@@ -5,9 +5,14 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<footer class='py-6 px-4 text-center'>
-  <p class='text-sm italic'>
+<footer class='py-6 px-4 flex justify-between container mx-auto'>
+  
+  <p class='text-sm italic flex-1'>
     {t('footer.about')}
     <a target='_blank' href='https://astro.build/'>Astro</a>
+  </p>
+  <p class='text-sm'>
+    <a href='mailto:rabadanoscar@outlook.es'>Contact: rabadanoscar@outlook.es</a
+    >
   </p>
 </footer>

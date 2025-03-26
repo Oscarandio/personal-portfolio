@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import 'devicon/devicon.min.css';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -13,6 +14,15 @@ const t = useTranslations(lang);
     <div>
       <h1 class='font-semibold text-5xl'>Óscar Rabadán</h1>
       <h2 class='font-bold text-2xl text-bold'>{t('hero.job')}</h2>
+      <div class='my-2 space-x-2 flex items-end'>
+        <a target='_blank' href='https://github.com/Oscarandio'
+          ><i class='devicon-github-plain text-2xl'></i></a
+        >
+        <a target='_blank' href='https://www.linkedin.com/in/rabadanoscar/'
+          ><i class='devicon-linkedin-plain text-2xl'></i></a
+        >
+        <p class="underline"><a href="mailto:rabadanoscar@outlook.es">rabadanoscar@outlook.es</a></p>
+      </div>
     </div>
   </div>
   <div
