@@ -1,9 +1,6 @@
 ---
 import LanguagePicker from '@/components/LanguagePicker.astro';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+import NavLinks from '@/components/NavLinks.astro';
 //  import ThemeIcon from './ThemeIcon.astro';
 ---
 
@@ -25,12 +22,7 @@ const t = useTranslations(lang);
     </div>
   </a>
   <ul>
-    <li><a href='#bio'>{t('nav.home')}</a></li>
-    <li><a href='#work'> {t('nav.work')}</a></li>
-    <li><a href='#collaborations'> {t('nav.collaborations')}</a></li>
-    <!-- <a href='#'>Resources</a>
-  <a href='#about'>About Me</a> -->
-    <li><a href='#contact'> {t('nav.contact')}</a></li>
+   <NavLinks>
   </ul>
   <div class='flex items-center gap-8'>
     <LanguagePicker />
@@ -68,6 +60,8 @@ const t = useTranslations(lang);
       font-weight: 500;
       padding: 10px 0;
     }
+
+    
 
     @media (min-width: 992px) {
       #nav-links {

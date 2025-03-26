@@ -33,6 +33,9 @@ export const ui = {
         'form.message': 'Say something...',
         'form.send': 'Send',
 
+        'footer.about': 'This portfolio has been developed with',
+
+
     },
     fr: {
         'nav.home': 'Présentation',
@@ -58,6 +61,9 @@ export const ui = {
         'form.subject': 'Objet',
         'form.message': 'Dites quelque chose...',
         'form.send': 'Envoyer',
+
+        'footer.about': 'Ce portfolio a été développé avec',
+
     },
     es: {
         'nav.home': 'Presentación',
@@ -83,6 +89,9 @@ export const ui = {
         'form.subject': 'Asunto',
         'form.message': 'Escribe aqui tu mensaje...',
         'form.send': 'Enviar',
+
+        'footer.about': 'Este portafolio ha sido desarrollado con',
+
 
     },
 } as const;
