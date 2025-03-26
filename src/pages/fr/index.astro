@@ -4,11 +4,35 @@ import Hero from '@/components/Hero.astro';
 import ToolkitComponent from '@/components/ToolkitComponent.astro';
 import Work from '@/components/Work.astro';
 import Contact from '@/components/Contact.astro';
+import Collaborations from '@/components/Collaborations.astro';
 ---
 
 <BaseLayout>
   <Hero />
   <ToolkitComponent />
   <Work />
+  <Collaborations />
   <Contact />
 </BaseLayout>
+
+<script>
+  document
+    .querySelectorAll<HTMLAnchorElement>('a[href^="#"]')
+    .forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = (this as HTMLAnchorElement)
+          .getAttribute('href')
+          ?.substring(1);
+        const targetElement = document.getElementById(targetId || '');
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      });
+    });
+</script>

@@ -1,65 +1,49 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { techColors } from '@/consts/techColors';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const projects = [
-  {
-    id: 'tubookbuddy',
-    title: 'tuBookBuddy.es',
-    description:
-      'TuBookBuddy es una plataforma web diseñada para amantes de la lectura, donde los usuarios pueden descubrir, organizar y compartir libros de manera sencilla. Desarrollada con Next.js y estilizada con TailwindCSS, la aplicación ofrece una experiencia rápida y fluida. ',
-    image: '/tubookbuddy.webp',
-    url: 'https://tubookbuddy.es',
-    technologies: [
-      'NextJS',
-      'TypeScript',
-      'TailwindCSS',
-      'React Context API',
-      'Firebase',
-      'Firestore',
-      'Firebase Authentication',
-      'Google Books API',
-    ],
-  },
-  {
-    id: 'vilatijolo',
-    title: 'Vilatijolo',
-    description: 'Una breve descripción del proyecto 2.',
-    image: '/vilatijolo.webp',
-    url: 'https://vilatijolo.pt',
-    technologies: ['Next.js', 'JavaScript', 'Styled Components'],
-  },
-];
 
-const techColors: Record<string, string> = {
-  Astro: 'bg-purple-500 text-white',
-  TypeScript: 'bg-blue-600 text-white',
-  JavaScript: 'bg-yellow-400 text-black',
-  React: 'bg-blue-500 text-white',
-  'Next.js': 'bg-black text-white',
-  NextJS: 'bg-black text-white',
-  TailwindCSS: 'bg-teal-500 text-white',
-  'CSS Modules': 'bg-gray-500 text-white',
-  Firebase: 'bg-yellow-500 text-black',
-  Firestore: 'bg-orange-500 text-white',
-  Redux: 'bg-purple-700 text-white',
-  'React Context API': 'bg-blue-400 text-white',
-  'Styled Components': 'bg-pink-500 text-white',
-  'Firebase Authentication': 'bg-red-500 text-white',
-  'Google Books API': 'bg-green-600 text-white',
-};
+const projects = [
+    {
+        id: 'tubookbuddy',
+        title: 'tuBookBuddy.es',
+        description:
+            t("project.tubookbuddy.description"),
+        image: '/tubookbuddy.webp',
+        url: 'https://tubookbuddy.es',
+        technologies: [
+            'NextJS',
+            'TypeScript',
+            'TailwindCSS',
+            'React Context API',
+            'Firebase',
+            'Firestore',
+            'Firebase Authentication',
+            'Google Books API',
+        ],
+    },
+    {
+        id: 'vilatijolo',
+        title: 'Vilatijolo',
+        description: 'Una breve descripción del proyecto 2.',
+        image: '/vilatijolo.webp',
+        url: 'https://vilatijolo.pt',
+        technologies: ['Next.js', 'JavaScript', 'Styled Components'],
+    },
+] 
 ---
 
-<section class='container mx-auto py-16 lg:py-24 px-4' id="work">
+<section class='container mx-auto py-16 lg:py-24 px-4' id='work'>
   <h2 class='text-2xl lg:text-4xl lg:text-center font-bold pb-8 lg:pb-16'>
     {t('nav.work')}
   </h2>
   <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
     {
       projects.map((project) => (
-        <a class='block group' target="_blank" href={project.url}>
+        <a class='block group' target='_blank' href={project.url}>
           <div class='bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-100 hover:scale-105'>
             <div class='overflow-hidden'>
               <img
@@ -72,7 +56,8 @@ const techColors: Record<string, string> = {
               <h3 class='text-bold text-xl font-semibold mb-2'>
                 {project.title}
               </h3>
-              <p class='text-light mb-4'>{project.description}</p>
+              <p class='text-light mt-3 mb-6'>
+                {project.description}</p>
               <div class='flex flex-wrap gap-2'>
                 {project.technologies.map((tech) => (
                   <span
