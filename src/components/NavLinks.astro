@@ -1,28 +1,47 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-  <li><a href='#bio'>{t('nav.home')}</a></li>
-  <li><a href='#work'> {t('nav.work')}</a></li>
-  <li><a href='#collaborations'> {t('nav.collaborations')}</a></li>
+<div class='mobile-menu px-4'>
+  <li><a href='#bio'>{t("nav.home")}</a></li>
+  <li><a href='#work'> {t("nav.work")}</a></li>
+  <li><a href='#collaborations'> {t("nav.collaborations")}</a></li>
   <!-- <a href='#'>Resources</a>
   <a href='#about'>About Me</a> -->
-  <li><a href='#contact'> {t('nav.contact')}</a></li>
+  <li><a href='#contact'> {t("nav.contact")}</a></li>
+</div>
 
 <style>
-   li {
+  .mobile-menu {
+    background-color: rgb(var(--color-primary-rgb) / 80%);
+    filter: blur(0.5px);
+    backdrop-filter: blur(10px);
+    padding-block: 10px;
+    transform: translateY(-4.7px);
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;;
+  }
+
+  li {
     display: block;
     font-size: 1rem;
     font-weight: 500;
-    padding: 10px 0;
+    padding: 20px 0;
   }
 
-  @media (min-width: 992px) {
- 
-     li {
+  @media (min-width: 1024px) {
+    .mobile-menu {
+      background-color: transparent;
+      filter: none;
+      backdrop-filter: none;
+      padding-block: 0;
+    }
+
+    li {
       display: inline-block;
       padding: 15px 20px;
     }

@@ -19,12 +19,12 @@ const collaborations = [
 ---
 
 <section
-  class='container mx-auto lg:pt-8 pb-16 lg:pb-36 px-4'
+  class='lg:container mx-auto lg:pt-8 pb-16 lg:pb-36 px-4'
   id='collaborations'>
   <h2 class='text-2xl lg:text-4xl lg:text-center font-bold pb-8 lg:pb-16'>
     {t('collaborations.title')}
   </h2>
-  <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+  <div class='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
     {
       collaborations.map((collaboration) => (
         <a class='block group' target='_blank' href={collaboration.url}>

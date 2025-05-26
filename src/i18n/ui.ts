@@ -14,7 +14,7 @@ export const ui = {
         'nav.collaborations': 'Collaborations',
         'nav.contact': 'Contact',
 
-        'hero.desc': "Frontend developer with over 3 years of experience, I like to keep up to date with the latest industry trends and continuously improve my knowledge.Focused on creating responsive and high- performance web applications with great attention to detail.",
+        'hero.desc': "Frontend developer with over 3 years of experience, I like to keep up to date with the latest industry trends and continuously improve my knowledge. Focused on creating responsive and high- performance web applications with great attention to detail.",
         'hero.job': "Frontend Developer",
         'hero.link': 'Would you like to check some of my projects? Go for it!',
 

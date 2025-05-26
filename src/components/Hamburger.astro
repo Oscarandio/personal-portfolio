@@ -1,4 +1,7 @@
-<div class='flex items-center justify-between mx-3 rounded-lg lg:hidden' id="mobileNav">
+<div
+  class='hamburger mobileNav items-center justify-between mx-3 rounded-lg'
+  
+>
   <a href='/'>
     <div class='flex items-center h-16 w-16'>
       <img class='p-2 rounded-xl' src='/profile.jpg' alt='Óscar Rabadán' />
@@ -6,17 +9,25 @@
   </a>
   <a href='/'><h1 class='block lg:hidden'>Óscar Rabadán</h1></a>
 
-  <div class='hamburger cursor-pointer p-3 lg:hidden'>
-    <!-- <span class='line'></span>
+  <div class='cursor-pointer p-3 lg:hidden'>
     <span class='line'></span>
-    <span class='line'></span> -->
+    <span class='line'></span>
+    <span class='line'></span>
   </div>
 </div>
 <style>
-  #mobileNav {
+  .mobileNav {
     background-color: rgb(var(--color-primary-rgb) / 80%);
     filter: blur(0.5px);
     backdrop-filter: blur(10px);
+  }
+  /* .expanded {
+    display: unset;
+  } */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .hamburger .line {
     background-color: white;
@@ -24,5 +35,11 @@
     height: 2px;
     margin-block: 6px;
     width: 32px;
+  }
+  @media screen and (min-width: 1024px) {
+    
+    .hamburger {
+      display: none;
+    }
   }
 </style>

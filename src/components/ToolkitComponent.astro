@@ -1,25 +1,26 @@
 ---
-import 'devicon/devicon.min.css';
+import "devicon/devicon.min.css";
 
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-import { SKILLS } from '@/consts/skills';
+import { SKILLS } from "@/consts/skills";
 
 const firstCard = SKILLS.slice(0, 6);
-const secondCard = SKILLS.slice(6, 14);
-const thirdCard = SKILLS.slice(14, 19);
-const fourthCard = SKILLS.slice(19, 23);
+const secondCard = SKILLS.slice(6, 15);
+const thirdCard = SKILLS.slice(15, 20);
+const fourthCard = SKILLS.slice(20, 27);
 ---
 
-<section class='w-full xl:w-8/12 2xl:w-6/12 mx-auto px-4'>
+<section class='w-full lg:w-8/12 2xl:w-6/12 mx-auto px-4'>
   <!-- <h2>Toolkit</h2> -->
   <div class='grid grid-cols-1 lg:grid-cols-2 gap-4'>
     <div
-      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'>
-      <h2 class='font-medium text-xl'>{t('skills.languages')}</h2>
+      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
+    >
+      <h2 class='font-medium text-xl'>{t("skills.languages")}</h2>
       <ul class='pt-4'>
         {
           firstCard.map(({ id, name }) => (
@@ -32,8 +33,9 @@ const fourthCard = SKILLS.slice(19, 23);
       </ul>
     </div>
     <div
-      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'>
-      <h2 class='font-medium text-xl'>{t('skills.frameworks')}</h2>
+      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
+    >
+      <h2 class='font-medium text-xl'>{t("skills.frameworks")}</h2>
       <ul class='pt-4'>
         {
           secondCard.map(({ id, name }) => (
@@ -47,8 +49,9 @@ const fourthCard = SKILLS.slice(19, 23);
     </div>
 
     <div
-      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'>
-      <h2 class='font-medium text-xl'>{t('skills.clouds')}</h2>
+      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
+    >
+      <h2 class='font-medium text-xl'>{t("skills.clouds")}</h2>
       <ul class='pt-4'>
         {
           thirdCard.map(({ id, name }) => (
@@ -61,14 +64,15 @@ const fourthCard = SKILLS.slice(19, 23);
       </ul>
     </div>
     <div
-      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'>
-      <h2 class='font-medium text-xl'>{t('skills.tools')}</h2>
+      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
+    >
+      <h2 class='font-medium text-xl'>{t("skills.tools")}</h2>
       <ul class='pt-4'>
         {
           fourthCard.map(({ id, name }) => (
             <li>
               <i
-                class={`devicon-${id}-plain ${id === 'notion' ? '' : 'colored'}`}
+                class={`devicon-${id}-plain ${id === "notion" ? "" : "colored"}`}
               />
               {name}
             </li>
