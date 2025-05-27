@@ -8,7 +8,7 @@ export const defaultLang = "en";
 
 export const ui = {
   en: {
-    "tab.title": "Óscar Rabadán's Portfolio",
+    "tab.title": "Oscar Rabadan – Frontend Developer Portfolio",
 
     "nav.home": "Presentation",
     "nav.work": "Featured Work",
@@ -40,7 +40,7 @@ export const ui = {
     "footer.about": "This portfolio has been developed with",
   },
   fr: {
-    "tab.title": "Portefeuille de Óscar Rabadán",
+    "tab.title": "Oscar Rabadan – Développeur front-end Portefeuille",
 
     "nav.home": "Présentation",
     "nav.work": "Projets en vedette",
@@ -62,8 +62,8 @@ export const ui = {
     "collaborations.title": "Collaborations en vedette",
     "project.vilatijolo.description":
       "Site web développé avec Next.js, qui exploite le rendu côté serveur (SSR) et la génération de sites statiques (SSG) pour améliorer les performances et l'indexation SEO. L'interface utilisateur est entièrement conçue avec des composants stylisés, ce qui permet une conception modulaire, épurée et facilement évolutive.",
-   
-      "form.title": "N'hésitez pas à me contacter !",
+
+    "form.title": "N'hésitez pas à me contacter !",
     "form.name": "Nom complet",
     "form.email": "Email",
     "form.subject": "Objet",
@@ -73,7 +73,7 @@ export const ui = {
     "footer.about": "Ce portfolio a été développé avec",
   },
   es: {
-    "tab.title": "Portfolio de Óscar Rabadán",
+    "tab.title": "Oscar Rabadan – Frontend Developer Portfolio",
 
     "nav.home": "Presentación",
     "nav.work": "Proyectos destacados",
