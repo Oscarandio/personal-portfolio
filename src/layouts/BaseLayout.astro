@@ -1,17 +1,18 @@
 ---
-import '@fontsource/poppins/400.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/600.css';
-import '@fontsource/poppins/700.css';
-import '@fontsource/poppins/900.css';
-import DotBackground from '../components/DotBackground.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/900.css";
+import DotBackground from "../components/DotBackground.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 
-import { getLangFromUrl } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <html lang={lang}>
@@ -19,7 +20,7 @@ const lang = getLangFromUrl(Astro.url);
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='viewport' content='width=device-width' />
-    <title>Óscar Rabadán</title>
+    <title>{t("tab.title")}</title>
   </head>
   <body>
     <Header />
@@ -29,8 +30,7 @@ const lang = getLangFromUrl(Astro.url);
     </main>
     <Footer />
     <script>
-      import '../scripts/menu.js';
+      import "../scripts/menu.js";
     </script>
   </body>
-
 </html>
