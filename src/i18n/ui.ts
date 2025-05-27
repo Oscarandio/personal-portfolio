@@ -27,7 +27,8 @@ export const ui = {
 
     "project.tubookbuddy.description":
       "TuBookBuddy is a web platform designed for book lovers, where users can easily discover, organize, and share books. Developed with Next.js and styled with TailwindCSS, the app offers a fast and fluid experience.",
-    "collaborations.title": "Featured Collaborations",
+    "project.vilatijolo.description":
+      "Website developed with Next.js, which leverages server-side rendering (SSR) and static site generation (SSG) to improve performance and SEO indexing. The user interface is fully styled with Styled Components, allowing for a modular, clean, and easily scalable design.",
 
     "form.title": "Don't hesitate to contact me!",
     "form.name": "Name",
@@ -59,8 +60,10 @@ export const ui = {
     "project.tubookbuddy.description":
       "TuBookBuddy est une plateforme Web conçue pour les amateurs de livres, où les utilisateurs peuvent facilement découvrir, organiser et partager des livres. Propulsée par Next.js et conçue avec TailwindCSS, l'application offre une expérience rapide et fluide.",
     "collaborations.title": "Collaborations en vedette",
-
-    "form.title": "N'hésitez pas à me contacter !",
+    "project.vilatijolo.description":
+      "Site web développé avec Next.js, qui exploite le rendu côté serveur (SSR) et la génération de sites statiques (SSG) pour améliorer les performances et l'indexation SEO. L'interface utilisateur est entièrement conçue avec des composants stylisés, ce qui permet une conception modulaire, épurée et facilement évolutive.",
+   
+      "form.title": "N'hésitez pas à me contacter !",
     "form.name": "Nom complet",
     "form.email": "Email",
     "form.subject": "Objet",
@@ -85,6 +88,8 @@ export const ui = {
     "project.tubookbuddy.description":
       "TuBookBuddy es una plataforma web diseñada para amantes de la lectura, donde los usuarios pueden descubrir, organizar y compartir libros de manera sencilla. Desarrollada con Next.js y estilizada con TailwindCSS, la aplicación ofrece una experiencia rápida y fluida.",
     "collaborations.title": "Colaboraciones destacadas",
+    "project.vilatijolo.description":
+      "Web desarrollada con Next.js, que aprovecha el renderizado del lado del servidor (SSR) y la generación de sitios estáticos (SSG) para mejorar el rendimiento y la indexación SEO. La interfaz de usuario está completamente estilizada con Styled Components, lo que permite un diseño modular, limpio y fácilmente escalable.",
 
     "skills.languages": "Lenguajes",
     "skills.frameworks": "Frameworks y librerias",
