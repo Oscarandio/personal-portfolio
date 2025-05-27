@@ -18,6 +18,11 @@ const t = useTranslations(lang);
 <html lang={lang}>
   <head>
     <meta charset='utf-8' />
+    <meta
+      http-equiv='Content-Security-Policy'
+      content="form-action 'self' https://fabform.io;"
+    />
+
     <link rel='icon' type='image/x-icon' href='/favicon_or_large.ico' />
     <meta name='viewport' content='width=device-width' />
     <title>{t("tab.title")}</title>

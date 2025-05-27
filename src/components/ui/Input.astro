@@ -1,11 +1,12 @@
 ---
-const { id, type, placeholder } = Astro.props;
+const { id, type, placeholder, name } = Astro.props;
 ---
 
 <input
   class='w-full p-3 my-3 text-bold placeholder:text-light border border-gray-300 rounded'
   id={id}
   type={type}
+  name={name}
   placeholder={placeholder}
   required
 />
