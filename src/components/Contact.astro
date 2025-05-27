@@ -1,34 +1,36 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-import Input from '@/components/ui/Input.astro';
+import Input from "@/components/ui/Input.astro";
 ---
 
-<section class='w-full lg:bg-primary lg:py-18' id='contact'>
+<section class='w-full lg:bg-primary lg:py-18 scroll-mt-16' id='contact'>
   <h2 class='text-2xl lg:text-4xl text-center font-bold pb-8 lg:pb-12'>
-    {t('nav.contact')}
+    {t("nav.contact")}
   </h2>
   <div
-    class='bg-white lg:w-8/12 2xl:w-6/12 mx-auto p-8 lg:rounded-lg lg:shadow-lg'>
+    class='bg-white lg:w-8/12 2xl:w-6/12 mx-auto p-8 lg:rounded-lg lg:shadow-lg'
+  >
     <h2 class='text-primary text-xl lg:text-2xl font-bold pb-4'>
-      {t('form.title')}
+      {t("form.title")}
     </h2>
     <!-- This form uses FabForm.io for submission -->
     <form
       action='https://fabform.io/f/B3IbnSC'
       method='post'
-      class='form-container'>
+      class='form-container'
+    >
       <div class='flex gap-5 w-full'>
-        <Input id='name' type='text' placeholder={t('form.name')} />
-        <Input id='email' type='text' placeholder={t('form.email')} />
+        <Input id='name' type='text' placeholder={t("form.name")} />
+        <Input id='email' type='text' placeholder={t("form.email")} />
       </div>
-      <Input id='subject' type='text' placeholder={t('form.subject')} />
-      <textarea id='message' rows='5' placeholder={t('form.message')} required
+      <Input id='subject' type='text' placeholder={t("form.subject")} />
+      <textarea id='message' rows='5' placeholder={t("form.message")} required
       ></textarea>
       <button
         class='bg-primary border-0 py-2 px-8 rounded cursor-pointer'
-        type='submit'>{t('form.send')}</button
+        type='submit'>{t("form.send")}</button
       >
     </form>
   </div>

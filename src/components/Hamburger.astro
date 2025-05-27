@@ -1,6 +1,5 @@
 <div
-  class='hamburger mobileNav items-center justify-between mx-3 rounded-lg'
-  
+  class='mobileNav items-center justify-between mx-3 rounded-lg'
 >
   <a href='/'>
     <div class='flex items-center h-16 w-16'>
@@ -9,7 +8,7 @@
   </a>
   <a href='/'><h1 class='block lg:hidden'>Óscar Rabadán</h1></a>
 
-  <div class='cursor-pointer p-3 lg:hidden'>
+  <div class='hamburger cursor-pointer p-3 lg:hidden'>
     <span class='line'></span>
     <span class='line'></span>
     <span class='line'></span>
@@ -20,15 +19,16 @@
     background-color: rgb(var(--color-primary-rgb) / 80%);
     filter: blur(0.5px);
     backdrop-filter: blur(10px);
+    display: flex;
   }
   /* .expanded {
     display: unset;
   } */
-  .hamburger {
+  /* .hamburger {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+  } */
   .hamburger .line {
     background-color: white;
     display: block;
@@ -37,8 +37,7 @@
     width: 32px;
   }
   @media screen and (min-width: 1024px) {
-    
-    .hamburger {
+    .mobileNav {
       display: none;
     }
   }

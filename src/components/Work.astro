@@ -1,44 +1,45 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import { techColors } from '@/consts/techColors';
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { techColors } from "@/consts/techColors";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-
 const projects = [
-    {
-        id: 'tubookbuddy',
-        title: 'tuBookBuddy.es',
-        description:
-            t("project.tubookbuddy.description"),
-        image: '/tubookbuddy.webp',
-        url: 'https://tubookbuddy.es',
-        technologies: [
-            'NextJS',
-            'TypeScript',
-            'TailwindCSS',
-            'React Context API',
-            'Firebase',
-            'Firestore',
-            'Firebase Authentication',
-            'Google Books API',
-        ],
-    },
-    {
-        id: 'vilatijolo',
-        title: 'Vilatijolo',
-        description: t("project.vilatijolo.description"),
-        image: '/vilatijolo.webp',
-        url: 'https://vilatijolo.pt',
-        technologies: ['Next.js', 'JavaScript', 'Styled Components'],
-    },
-] 
+  {
+    id: "tubookbuddy",
+    title: "tuBookBuddy.es",
+    description: t("project.tubookbuddy.description"),
+    image: "/tubookbuddy.webp",
+    url: "https://tubookbuddy.es",
+    technologies: [
+      "NextJS",
+      "TypeScript",
+      "TailwindCSS",
+      "React Context API",
+      "Firebase",
+      "Firestore",
+      "Firebase Authentication",
+      "Google Books API",
+    ],
+  },
+  {
+    id: "vilatijolo",
+    title: "Vilatijolo",
+    description: t("project.vilatijolo.description"),
+    image: "/vilatijolo.webp",
+    url: "https://vilatijolo.pt",
+    technologies: ["Next.js", "JavaScript", "Styled Components"],
+  },
+];
 ---
 
-<section class='lg:container mx-auto py-16 lg:py-24 px-4' id='work'>
+<section
+  class='lg:container mx-auto py-16 lg:py-24 px-4 scroll-mt-16'
+  id='work'
+>
   <h2 class='text-2xl lg:text-4xl lg:text-center font-bold pb-8 lg:pb-16'>
-    {t('nav.work')}
+    {t("nav.work")}
   </h2>
   <div class='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
     {
@@ -56,12 +57,12 @@ const projects = [
               <h3 class='text-bold text-xl font-semibold mb-2'>
                 {project.title}
               </h3>
-              <p class='text-light mt-3 mb-6'>
-                {project.description}</p>
+              <p class='text-light mt-3 mb-6'>{project.description}</p>
               <div class='flex flex-wrap gap-2'>
                 {project.technologies.map((tech) => (
                   <span
-                    class={`px-3 py-1 rounded-full text-sm font-medium ${techColors[tech] || 'bg-gray-300 text-black'}`}>
+                    class={`px-3 py-1 rounded-full text-sm font-medium ${techColors[tech] || "bg-gray-300 text-black"}`}
+                  >
                     {tech}
                   </span>
                 ))}
@@ -73,5 +74,3 @@ const projects = [
     }
   </div>
 </section>
-
-
