@@ -41,7 +41,7 @@ const projects = [
   <h2 class='text-2xl lg:text-4xl lg:text-center font-bold pb-8 lg:pb-16'>
     {t("nav.work")}
   </h2>
-  <div class='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
+  <div class='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8'>
     {
       projects.map((project) => (
         <a class='block group' target='_blank' href={project.url}>
@@ -57,7 +57,9 @@ const projects = [
               <h3 class='text-bold text-xl font-semibold mb-2'>
                 {project.title}
               </h3>
-              <p class='text-light mt-3 mb-6'>{project.description}</p>
+              <p class='text-sm lg:text-base text-light mt-3 mb-6'>
+                {project.description}
+              </p>
               <div class='flex flex-wrap gap-2'>
                 {project.technologies.map((tech) => (
                   <span

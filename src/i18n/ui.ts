@@ -30,6 +30,13 @@ export const ui = {
     "project.vilatijolo.description":
       "Website developed with Next.js, which leverages server-side rendering (SSR) and static site generation (SSG) to improve performance and SEO indexing. The user interface is fully styled with Styled Components, allowing for a modular, clean, and easily scalable design.",
 
+    "youtube.description":
+      "In my free time, I combine programming and audiovisual creativity on QuietCode Room, a YouTube channel where I create real-life front-end projects in ASMR format — without voice, with a focus on keyboard sounds and visual aesthetics.",
+    "youtube.video.one":
+      "Build a Premium Product Landing Page with Tailwind CSS",
+    "youtube.video.two": "React Basics - Task Manager",
+    "youtube.button": "Go to channel",
+
     "form.title": "Don't hesitate to contact me!",
     "form.name": "Name",
     "form.email": "Email",
@@ -63,6 +70,13 @@ export const ui = {
     "project.vilatijolo.description":
       "Site web développé avec Next.js, qui exploite le rendu côté serveur (SSR) et la génération de sites statiques (SSG) pour améliorer les performances et l'indexation SEO. L'interface utilisateur est entièrement conçue avec des composants stylisés, ce qui permet une conception modulaire, épurée et facilement évolutive.",
 
+    "youtube.description":
+      "Pendant mon temps libre, je combine programmation et créativité audiovisuelle sur QuietCode Room, une chaîne YouTube où je crée des projets front-end réels au format ASMR — sans voix, en mettant l'accent sur les sons du clavier et l'esthétique visuelle.",
+    "youtube.video.one":
+      "Créez une page de destination de produit premium avec Tailwind CSS",
+    "youtube.video.two": "Bases de React - Gestionnaire de tâches",
+    "youtube.button": "Voir le canal",
+
     "form.title": "N'hésitez pas à me contacter !",
     "form.name": "Nom complet",
     "form.email": "Email",
@@ -95,6 +109,13 @@ export const ui = {
     "skills.frameworks": "Frameworks y librerias",
     "skills.clouds": "Clouds y proveedores de servicio",
     "skills.tools": "Herramientas",
+
+    "youtube.description":
+      "En mi tiempo libre, combino programación y creatividad audiovisual en QuietCode Room, un canal de YouTube donde creo proyectos reales de frontend en formato ASMR — sin voz, con enfoque en el sonido del teclado y la estética visual.",
+    "youtube.video.one":
+      "Crea una Landing Page de Producto Premium con Tailwind CSS",
+    "youtube.video.two": "Conceptos básicos de React: administrador de tareas",
+    "youtube.button": "Ver canal",
 
     "form.title": "¡No dudes en contactarme!",
     "form.name": "Nombre completo",
