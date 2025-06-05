@@ -4,11 +4,8 @@ import NavLinks from "@/components/NavLinks.astro";
 //  import ThemeIcon from './ThemeIcon.astro';
 ---
 
-<div
-  class='nav-links m-0 py-1 px-6 w-full lg:rounded-2xl'
-  id='nav-links'
->
-  <a href='#bio'>
+<div class='nav-links m-0 py-1 px-6 w-full lg:rounded-2xl' id='nav-links'>
+  <a href='/#bio'>
     <div class='name hidden lg:flex items-center gap-2'>
       <div class='flex items-center'>
         <div class='h-12 w-12'>
@@ -18,66 +15,64 @@ import NavLinks from "@/components/NavLinks.astro";
             alt='Foto de perfil de Óscar Rabadán'
           />
         </div>
-        <p>Óscar Rabadán</p>
+        <p class='text-sm'>Óscar Rabadán</p>
       </div>
     </div>
   </a>
-  
-    <NavLinks />
-    <div class='flex items-center gap-8'>
-      <LanguagePicker />
-      <!-- <ThemeIcon /> -->
-    </div>
 
-    <style>
-      /* estilos de la barra de navegación*/
+  <NavLinks />
+  <div class='flex items-center gap-8'>
+    <LanguagePicker />
+    <!-- <ThemeIcon /> -->
+  </div>
 
+  <style>
+    /* estilos de la barra de navegación*/
+
+    .nav-links {
+      display: none;
+    }
+
+    .nav-links .name {
+      animation: header-show-name 0.3s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 250px;
+    }
+
+    @keyframes header-show-name {
+      0% {
+        /* opacity: 0; */
+        transform: scale(0);
+      }
+
+      100% {
+        /* opacity: 100%; */
+        transform: scale(1);
+      }
+    }
+    .nav-links li {
+      display: block;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 10px 0;
+    }
+    .expanded {
+      display: block;
+    }
+
+    @media (min-width: 1024px) {
       .nav-links {
-        display: none;
-    
+        background-color: rgb(var(--color-primary-rgb) / 70%);
+        display: flex;
+        backdrop-filter: blur(10px);
+        align-items: center;
+        justify-content: space-between;
       }
 
-      .nav-links .name {
-        animation: header-show-name 0.3s linear both;
-        animation-timeline: scroll();
-        animation-range: 0 250px;
-      }
-
-      @keyframes header-show-name {
-        0% {
-          /* opacity: 0; */
-          transform: scale(0);
-        }
-
-        100% {
-          /* opacity: 100%; */
-          transform: scale(1);
-        }
-      }
       .nav-links li {
-        display: block;
-        font-size: 1rem;
-        font-weight: 500;
-        padding: 10px 0;
+        display: inline-block;
+        padding: 15px 20px;
       }
-      .expanded {
-        display: block;
-      }
-
-      @media (min-width: 1024px) {
-        .nav-links {
-          background-color: rgb(var(--color-primary-rgb) / 70%);
-          display: flex;
-          backdrop-filter: blur(10px);
-          align-items: center;
-          justify-content: space-between;
-        }
-
-        .nav-links li {
-          display: inline-block;
-          padding: 15px 20px;
-        }
-      }
-    </style>
-  </ul>
+    }
+  </style>
 </div>

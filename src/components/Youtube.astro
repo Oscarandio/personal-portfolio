@@ -5,7 +5,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class='lg:container mx-auto py-12 px-4 scroll-mt-16' id='youtube'>
+<section
+  class='lg:container mx-auto py-12 px-4 scroll-mt-16 lg:scroll-mt-24'
+  id='youtube'
+>
   <h2 class='text-2xl lg:text-4xl lg:text-center font-bold pb-6 lg:pb-8'>
     Youtube
   </h2>
@@ -15,7 +18,7 @@ const t = useTranslations(lang);
   <div class='grid grid-cols-1 md:grid-cols-2 gap-8 pt-12'>
     <!-- Video 1 -->
     <div
-      class='bg-white rounded-xl shadow-lg border border-gray/40 overflow-hidden'
+      class='bg-white rounded-xl shadow-lg border border-gray/40 overflow-hidden hover:scale-105 transition-transform'
     >
       <lite-youtube
         class='aspect-video w-full'
@@ -30,7 +33,7 @@ const t = useTranslations(lang);
 
     <!-- Video 2 -->
     <div
-      class='bg-white rounded-xl shadow-lg border border-gray/40 overflow-hidden'
+      class='bg-white rounded-xl shadow-lg border border-gray/40 overflow-hidden hover:scale-105 transition-transform'
     >
       <lite-youtube
         class='aspect-video w-full'
