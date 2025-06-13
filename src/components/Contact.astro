@@ -6,15 +6,21 @@ import Input from "@/components/ui/Input.astro";
 ---
 
 <section class='w-full lg:bg-primary lg:py-18 mt-12 scroll-mt-16' id='contact'>
-  <h2 class='text-2xl lg:text-4xl text-center font-bold pb-8 lg:pb-12'>
-    {t("nav.contact")}
-  </h2>
-  <div
+  <header>
+    <h2 class='text-2xl lg:text-4xl text-center font-bold pb-8 lg:pb-12'>
+      {t("nav.contact")}
+    </h2>
+  </header>
+
+  <article
     class='bg-white lg:w-8/12 2xl:w-6/12 mx-auto p-8 lg:rounded-lg lg:shadow-lg'
   >
-    <h2 class='text-primary text-xl lg:text-2xl font-bold pb-4'>
-      {t("form.title")}
-    </h2>
+    <header>
+      <h2 class='text-primary text-xl lg:text-2xl font-bold pb-4'>
+        {t("form.title")}
+      </h2>
+    </header>
+
     <!-- This form uses FabForm.io for submission -->
     <form
       action='https://fabform.io/f/B3IbnSC'
@@ -42,12 +48,11 @@ import Input from "@/components/ui/Input.astro";
         rows='5'
         placeholder={t("form.message")}
         required></textarea>
-      <button
-        class='bg-primary border-0 py-2 px-8 rounded cursor-pointer'
-        type='submit'>{t("form.send")}</button
+      <button class='bg-primary border-0 py-2 px-8 rounded cursor-pointer'
+        >{t("form.send")}</button
       >
     </form>
-  </div>
+  </article>
 </section>
 <style>
   textarea {
