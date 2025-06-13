@@ -12,13 +12,14 @@ export const ui = {
 
     "nav.home": "Presentation",
     "nav.work": "Featured Work",
+    "nav.projects": "Projects",
     "nav.collaborations": "Collaborations",
     "nav.contact": "Contact",
 
     "hero.desc":
-      "Frontend developer with over 3 years of experience, I like to keep up to date with the latest industry trends and continuously improve my knowledge. Focused on creating responsive and high- performance web applications with great attention to detail.",
-    "hero.job": "Frontend Developer",
-    "hero.link": "Would you like to check some of my projects? Go for it!",
+      "With 2+ years of experience building performant, scalable, and responsive web interfaces. Specialized in React, Next.js and modern UI frameworks. Passionate about clean code, UX and delivering solutions that make an impact. Eager to contribute to ambitious projects with creativity, precision, and technical rigor.",
+    "hero.job": "Front-end Developer · Specialized in React & Next.js",
+    "hero.link": "Would you like to check some of my featured work? Go for it!",
 
     "skills.languages": "Languages",
     "skills.frameworks": "Frameworks and Libraries",
@@ -51,12 +52,13 @@ export const ui = {
 
     "nav.home": "Présentation",
     "nav.work": "Projets en vedette",
+    "nav.projects": "Projets",
     "nav.collaborations": "Collaborations",
     "nav.contact": "Contact",
 
     "hero.desc":
-      "Développeur front-end avec plus de 3 ans d'expérience, j'aime me tenir au courant des dernières tendances du secteur et améliorer continuellement mes connaissances. Je me concentre sur la création d'applications web réactives et performantes, avec un grand souci du détail.",
-    "hero.job": "Développeur front-end",
+      "Développeur front-end avec plus de deux ans d'expérience dans la création d'interfaces web performantes, évolutives et réactives. Spécialisé en React, Next.js et les frameworks d'interface utilisateur modernes. Passionné par le code propre, l'expérience utilisateur (UX) et la création de solutions percutantes, je souhaite contribuer à des projets ambitieux avec créativité, précision et rigueur technique.",
+    "hero.job": "Développeur front-end · Spécialisé en React et Next.js",
     "hero.link": "Envie de découvrir mes projets? N'hésitez pas!",
 
     "skills.languages": "Langages",
@@ -90,14 +92,15 @@ export const ui = {
     "tab.title": "Oscar Rabadan – Frontend Developer Portfolio",
 
     "nav.home": "Presentación",
-    "nav.work": "Proyectos destacados",
+    "nav.work": "Trabajos destacados",
+    "nav.projects": "Proyectos",
     "nav.collaborations": "Colaboraciones",
     "nav.contact": "Contacto",
 
     "hero.desc":
-      "Frontend Developer con más de 3 años de experiencia. Me gusta mantenerme al día con las últimas tendencias del sector y mejorar continuamente mis conocimientos. Me enfoco en crear aplicaciones web responsivas y de alto rendimiento, prestando especial atención al detalle.",
-    "hero.job": "Frontend Developer",
-    "hero.link": "¿Te gustaría ver algunos de mis proyectos?",
+      "Desarrollador frontend con más de 2 años de experiencia en la creación de interfaces web de alto rendimiento, escalables y responsivas. Especializado en React, Next.js y frameworks de interfaz de usuario modernos. Apasionado por el código limpio, la experiencia de usuario (UX) y la creación de soluciones impactantes. Con ganas de contribuir a proyectos ambiciosos con creatividad, precisión y rigor técnico.",
+    "hero.job": "Frontend Developer · Especializado en React y Next.js",
+    "hero.link": "¿Te gustaría ver algunos de mis trabajos destacados?",
 
     "project.tubookbuddy.description":
       "TuBookBuddy es una plataforma web diseñada para amantes de la lectura, donde los usuarios pueden descubrir, organizar y compartir libros de manera sencilla. Desarrollada con Next.js y estilizada con TailwindCSS, la aplicación ofrece una experiencia rápida y fluida.",

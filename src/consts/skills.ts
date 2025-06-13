@@ -59,10 +59,10 @@ export const SKILLS: Skills[] = [
     id: "redux",
     name: "Redux",
   },
-  {
-    id: "jquery",
-    name: "jQuery",
-  },
+  // {
+  //   id: "jquery",
+  //   name: "jQuery",
+  // },
   {
     id: "git",
     name: "Git",
@@ -91,24 +91,36 @@ export const SKILLS: Skills[] = [
     id: "firebase",
     name: "Firebase",
   },
+  // {
+  //   id: "npm",
+  //   name: "npm",
+  // },
+  {
+    id: "pnpm",
+    name: "pnpm",
+  },
+  {
+    id: "yarn",
+    name: "yarn",
+  },
   {
     id: "figma",
     name: "Figma",
   },
-  {
-    id: "photoshop",
-    name: "Photoshop",
-  },
-  {
-    id: "illustrator",
-    name: "Illustrator",
-  },
+  // {
+  //   id: "photoshop",
+  //   name: "Photoshop",
+  // },
+  // {
+  //   id: "illustrator",
+  //   name: "Illustrator",
+  // },
   {
     id: "notion",
     name: "Notion",
   },
-  {
-    id: "trello",
-    name: "Trello",
-  },
+  // {
+  //   id: "trello",
+  //   name: "Trello",
+  // },
 ] as const;

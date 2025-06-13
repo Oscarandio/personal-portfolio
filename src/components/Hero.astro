@@ -4,37 +4,51 @@ import "devicon/devicon.min.css";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const name = 'Óscar RABADÁN';
 ---
 
 <section
   class='w-full lg:w-8/12 2xl:w-6/12 mx-auto pt-4 px-4 scroll-mt-16'
   id='bio'
 >
-  <div class='hidden lg:flex items-center justify-start gap-8 mt-12 mb-8'>
-    <div class='h-32 w-32'>
-      <img class='rounded-full' src='/profile.jpg' alt='Óscar Rabadán' />
-    </div>
+  <article class='flex items-center justify-start gap-8 mt-12 lg:mb-8'>
+    <figure class='hidden lg:flex h-32 w-32'>
+      <img class='rounded-xl' src='/profile.jpg' alt=`Fotografía de ${name}` />
+    </figure>
     <div>
-      <h1 class='font-semibold text-5xl'>Óscar Rabadán</h1>
-      <h2 class='font-bold text-2xl text-bold'>{t("hero.job")}</h2>
-      <div class='my-2 space-x-2 flex items-end'>
-        <a target='_blank' href='https://github.com/Oscarandio'
-          ><i class='devicon-github-plain text-2xl'></i></a
+      <header>
+        <h1 class='hidden lg:flex font-semibold text-4xl'>{name}</h1>
+        <h2 class='font-bold text-2xl lg:text-xl text-gray-900'>
+          {t("hero.job")}
+        </h2>
+      </header>
+      <footer class='my-2 flex items-center gap-2'>
+        <a
+          class='hover:scale-120 transition-transform'
+          target='_blank'
+          href='https://github.com/Oscarandio'
+          ><i class='devicon-github-plain text-xl text-gray-800'></i></a
         >
-        <a target='_blank' href='https://www.linkedin.com/in/rabadanoscar/'
-          ><i class='devicon-linkedin-plain text-2xl'></i></a
+        <a
+          class='hover:scale-120 transition-transform'
+          target='_blank'
+          href='https://www.linkedin.com/in/rabadanoscar/'
+          ><i class='devicon-linkedin-plain text-xl text-cyan-800'></i></a
         >
 
-        <a href='mailto:m.rabadanoscar@gmail.com'
-          ><div class='flex items-center h-8.5'>
+        <a
+          class='hover:scale-120 transition-transform'
+          href='mailto:m.rabadanoscar@gmail.com'
+          ><div class='flex items-center h-7.5 mb-1'>
             <img src='/email.svg' alt='email' />
           </div>
         </a>
-      </div>
+      </footer>
     </div>
-  </div>
-  <div
-    class='xl:text-lg px-3 lg:px-0 pb-8 lg:rounded-e-lg lg:rounded-s-lg rounded-ss-2xl rounded-se-2xl lg:rounded-ss-3xl lg:rounded-se-3xl mt-6 lg:mt-0'
+  </article>
+  <article
+    class='xl:text-lg pb-8 lg:rounded-e-lg lg:rounded-s-lg rounded-ss-2xl rounded-se-2xl lg:rounded-ss-3xl lg:rounded-se-3xl mt-6 lg:mt-0'
   >
     <p>
       {t("hero.desc")}
@@ -42,5 +56,5 @@ const t = useTranslations(lang);
     <p class='mt-4 font-medium underline'>
       <a href='#work'>{t("hero.link")}</a>
     </p>
-  </div>
+  </article>
 </section>

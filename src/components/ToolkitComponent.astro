@@ -9,18 +9,20 @@ const t = useTranslations(lang);
 import { SKILLS } from "@/consts/skills";
 
 const firstCard = SKILLS.slice(0, 6);
-const secondCard = SKILLS.slice(6, 15);
-const thirdCard = SKILLS.slice(15, 20);
-const fourthCard = SKILLS.slice(20, 27);
+const secondCard = SKILLS.slice(6, 14);
+const thirdCard = SKILLS.slice(14, 19);
+const fourthCard = SKILLS.slice(19, 25);
 ---
 
 <section class='w-full lg:w-8/12 2xl:w-6/12 mx-auto px-4'>
   <!-- <h2>Toolkit</h2> -->
   <div class='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-    <div
+    <article
       class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
     >
-      <h2 class='font-medium text-xl'>{t("skills.languages")}</h2>
+      <header>
+        <h2 class='font-medium text-xl'>{t("skills.languages")}</h2>
+      </header>
       <ul class='pt-4'>
         {
           firstCard.map(({ id, name }) => (
@@ -31,11 +33,13 @@ const fourthCard = SKILLS.slice(20, 27);
           ))
         }
       </ul>
-    </div>
-    <div
+    </article>
+    <article
       class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
     >
-      <h2 class='font-medium text-xl'>{t("skills.frameworks")}</h2>
+      <header>
+        <h2 class='font-medium text-xl'>{t("skills.frameworks")}</h2>
+      </header>
       <ul class='pt-4'>
         {
           secondCard.map(({ id, name }) => (
@@ -46,12 +50,14 @@ const fourthCard = SKILLS.slice(20, 27);
           ))
         }
       </ul>
-    </div>
+    </article>
 
-    <div
+    <article
       class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
     >
-      <h2 class='font-medium text-xl'>{t("skills.clouds")}</h2>
+      <header>
+        <h2 class='font-medium text-xl'>{t("skills.clouds")}</h2>
+      </header>
       <ul class='pt-4'>
         {
           thirdCard.map(({ id, name }) => (
@@ -62,11 +68,13 @@ const fourthCard = SKILLS.slice(20, 27);
           ))
         }
       </ul>
-    </div>
-    <div
+    </article>
+    <article
       class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
     >
-      <h2 class='font-medium text-xl'>{t("skills.tools")}</h2>
+      <header>
+        <h2 class='font-medium text-xl'>{t("skills.tools")}</h2>
+      </header>
       <ul class='pt-4'>
         {
           fourthCard.map(({ id, name }) => (
@@ -79,7 +87,7 @@ const fourthCard = SKILLS.slice(20, 27);
           ))
         }
       </ul>
-    </div>
+    </article>
   </div>
 </section>
 <style>

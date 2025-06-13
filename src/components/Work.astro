@@ -35,32 +35,34 @@ const projects = [
 ---
 
 <section
-  class='lg:container mx-auto py-16 lg:py-24 px-4 scroll-mt-16'
+  class='lg:container mx-auto pt-16 lg:py-24 px-4 scroll-mt-16'
   id='work'
 >
   <h2 class='text-2xl lg:text-4xl lg:text-center font-bold pb-8 lg:pb-16'>
     {t("nav.work")}
   </h2>
-  <div class='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8'>
+  <div class='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-8'>
     {
       projects.map((project) => (
         <a class='block group' target='_blank' href={project.url}>
-          <div class='bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105'>
-            <div class='overflow-hidden'>
+          <article class='bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105'>
+            <figure class='overflow-hidden'>
               <img
                 src={project.image}
                 alt={project.title}
                 class='w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110'
               />
-            </div>
+            </figure>
             <div class='p-6'>
-              <h3 class='text-bold text-xl font-semibold mb-2'>
-                {project.title}
-              </h3>
+              <header>
+                <h3 class='text-bold text-xl font-semibold mb-2'>
+                  {project.title}
+                </h3>
+              </header>
               <p class='text-sm lg:text-base text-light mt-3 mb-6'>
                 {project.description}
               </p>
-              <div class='flex flex-wrap gap-2'>
+              <footer class='flex flex-wrap gap-2'>
                 {project.technologies.map((tech) => (
                   <span
                     class={`px-3 py-1 rounded-full text-sm font-medium ${techColors[tech] || "bg-gray-300 text-black"}`}
@@ -68,9 +70,9 @@ const projects = [
                     {tech}
                   </span>
                 ))}
-              </div>
+              </footer>
             </div>
-          </div>
+          </article>
         </a>
       ))
     }

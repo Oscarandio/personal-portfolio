@@ -21,11 +21,15 @@ type skillId =
   | "cloudflare"
   | "supabase"
   | "firebase"
+  | "npm"
+  | "pnpm"
+  | "yarn"
   | "figma"
   | "photoshop"
   | "illustrator"
   | "notion"
   | "trello";
+  
 
 type skillName =
   | "Html"
@@ -50,11 +54,15 @@ type skillName =
   | "Cloudflare"
   | "Supabase"
   | "Firebase"
+  | "npm"
+  | "pnpm"
+  | "yarn"
   | "Figma"
   | "Photoshop"
   | "Illustrator"
   | "Notion"
   | "Trello";
+ 
 
 export interface Skills {
   id: skillId;
