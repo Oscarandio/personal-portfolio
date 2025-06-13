@@ -1,16 +1,22 @@
 ---
+/* Fonts */
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/900.css";
+
+/* Components*/
 import DotBackground from "../components/DotBackground.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+/* Styles */
 import "../styles/global.css";
+import "../styles/index.css"; // Pasar todo a TailwindCSS
 
+/* Languages */
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -22,12 +28,56 @@ const t = useTranslations(lang);
       http-equiv='Content-Security-Policy'
       content="form-action 'self' https://fabform.io;"
     />
-
     <link rel='icon' type='image/x-icon' href='/favicon_or_large.ico' />
     <meta name='viewport' content='width=device-width' />
+    <link rel='canonical' href='https://rabadanoscar.com' />
+    <link
+      rel='alternate'
+      href='https://rabadanoscar.com/fr/'
+      hreflang='fr-FR'
+    />
+    <link
+      rel='alternate'
+      href='https://rabadanoscar.com/es/'
+      hreflang='es-ES'
+    />
+    <link
+      rel='alternate'
+      href='https://rabadanoscar.com'
+      hreflang='x-default'
+    />
     <title>{t("tab.title")}</title>
+    <meta
+      name='description'
+      content='This is the personal portfolio of Oscar Rabadan'
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property='og:url' content='https://rabadanoscar.com' />
+    <meta property='og:type' content='website' />
+    <meta
+      property='og:title'
+      content='Oscar Rabadan – Frontend Developer Portfolio'
+    />
+    <meta
+      property='og:description'
+      content='This is the personal portfolio of Oscar Rabadan'
+    />
+    <meta property='og:image' content='https://rabadanoscar.com/profile.jpg' />
+
+    <!-- Twitter Meta Tags -->
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta property='twitter:domain' content='rabadanoscar.com' />
+    <meta property='twitter:url' content='https://rabadanoscar.com' />
+    <meta
+      name='twitter:title'
+      content='Oscar Rabadan – Frontend Developer Portfolio'
+    />
+    <meta
+      name='twitter:description'
+      content='This is the personal portfolio of Oscar Rabadan'
+    />
     <script
-      type='module'
       src='https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js'
     ></script>
   </head>
@@ -39,7 +89,7 @@ const t = useTranslations(lang);
     </main>
     <Footer />
     <script>
-      import "../scripts/menu.js";
+      import "../scripts/menu.ts";
     </script>
   </body>
 </html>
