@@ -3,6 +3,17 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const videos = [
+  {
+    id: "u7PYEu5L2AA",
+    title: t("youtube.video.one")
+  },
+  {
+    id: "1mFsD4bpWYw",
+    title: t("youtube.video.two")
+  }
+]
 ---
 
 <section
@@ -19,36 +30,19 @@ const t = useTranslations(lang);
     {t("youtube.description")}
   </p>
   <div class='w-full lg:w-8/12 2xl:w-6/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pt-12'>
-    <!-- Video 1 -->
-    <article
+    {
+      videos.map((video) => (
+      <article
       class='bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform'
     >
       <lite-youtube
         class='aspect-video w-full'
-        videoid='u7PYEu5L2AA'
-        title={t("youtube.video.one")}></lite-youtube>
-      <!-- <div class='p-3'>
-        <h3 class='text-sm xl:text-base font-medium text-black'>
-          {t("youtube.video.one")}
-        </h3>
-      </div> -->
+        videoid={video.id}
+        title={video.title}></lite-youtube>
     </article>
-
-    <!-- Video 2 -->
-    <article
-      class='bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform'
-    >
-      <lite-youtube
-        class='aspect-video w-full'
-        videoid='1mFsD4bpWYw'
-        title={t("youtube.video.two")}
-        '></lite-youtube>
-      <!-- <div class='p-3'>
-        <h3 class='text-sm xl:text-base font-medium text-black'>
-          {t("youtube.video.two")}
-        </h3>
-      </div> -->
-    </article>
+      ))
+    }
+   
   </div>
   <div class='mt-12 flex justify-center'>
     <a
