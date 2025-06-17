@@ -19,9 +19,9 @@
       border: 1px solid #fff;
       border-radius: 3px;
     }
-    ::-webkit-scrollbar-thumb:hover {
+    /* ::-webkit-scrollbar-thumb:hover {
       background-color: rgb(var(--color-primary));
-    }
+    } */
   }
   /* html {
       font-family: 'Karla', sans-serif;
