@@ -22,8 +22,8 @@ export const ui = {
     "hero.link": "Would you like to check some of my featured work? Go for it!",
 
     "skills.languages": "Languages",
-    "skills.frameworks": "Frameworks and Libraries",
-    "skills.clouds": "Clouds and Providers",
+    "skills.frameworks": "Frameworks & Libraries",
+    "skills.clouds": "Cloud & Deployment",
     "skills.tools": "Tools",
 
     "project.tubookbuddy.description":
@@ -63,7 +63,7 @@ export const ui = {
 
     "skills.languages": "Langages",
     "skills.frameworks": "Frameworks et librairies",
-    "skills.clouds": "Clouds et Fournisseurs de services",
+    "skills.clouds": "Clouds & Deployment",
     "skills.tools": "Outils",
 
     "project.tubookbuddy.description":
@@ -110,7 +110,7 @@ export const ui = {
 
     "skills.languages": "Lenguajes",
     "skills.frameworks": "Frameworks y librerias",
-    "skills.clouds": "Clouds y proveedores de servicio",
+    "skills.clouds": "Cloud & Deployment",
     "skills.tools": "Herramientas",
 
     "youtube.description":

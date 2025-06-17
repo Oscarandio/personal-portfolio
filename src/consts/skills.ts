@@ -1,4 +1,4 @@
-import type { Skills } from '@/types/skills'
+import type { Skills } from "@/types/skills";
 
 export const SKILLS: Skills[] = [
   {
@@ -10,18 +10,26 @@ export const SKILLS: Skills[] = [
     name: "Javascript",
   },
   {
-    id: "sass",
-    name: "Sass",
+    id: "jquery",
+    name: "jQuery",
+  },
+
+  {
+    id: "html5",
+    name: "Html",
   },
   {
     id: "css3",
     name: "CSS",
   },
   {
-    id: "html5",
-    name: "Html",
+    id: "sass",
+    name: "Sass",
   },
-
+  {
+    id: "less",
+    name: "Less",
+  },
   {
     id: "markdown",
     name: "Markdown",
@@ -39,6 +47,18 @@ export const SKILLS: Skills[] = [
     name: "Astro",
   },
   {
+    id: "redux",
+    name: "Redux",
+  },
+  {
+    id: "reactrouter",
+    name: "React Router",
+  },
+  {
+    id: "axios",
+    name: "Axios",
+  },
+  {
     id: "tailwindcss",
     name: "Tailwind CSS",
   },
@@ -46,7 +66,30 @@ export const SKILLS: Skills[] = [
     id: "bootstrap",
     name: "Bootstrap",
   },
-
+  {
+    id: "nodejs",
+    name: "Node.js",
+  },
+  {
+    id: "express",
+    name: "Express",
+  },
+  {
+    id: "mongodb",
+    name: "MongoDB",
+  },
+  {
+    id: "mongoose",
+    name: "Mongoose",
+  },
+  {
+    id: "supabase",
+    name: "Supabase",
+  },
+  {
+    id: "firebase",
+    name: "Firebase",
+  },
   {
     id: "vitejs",
     name: "Vite",
@@ -56,20 +99,16 @@ export const SKILLS: Skills[] = [
     name: "Webpack",
   },
   {
-    id: "redux",
-    name: "Redux",
-  },
-  // {
-  //   id: "jquery",
-  //   name: "jQuery",
-  // },
-  {
-    id: "git",
-    name: "Git",
+    id: "npm",
+    name: "npm",
   },
   {
-    id: "github",
-    name: "Github",
+    id: "pnpm",
+    name: "pnpm",
+  },
+  {
+    id: "yarn",
+    name: "yarn",
   },
   {
     id: "vercel",
@@ -84,43 +123,35 @@ export const SKILLS: Skills[] = [
     name: "Cloudflare",
   },
   {
-    id: "supabase",
-    name: "Supabase",
+    id: "git",
+    name: "Git",
   },
   {
-    id: "firebase",
-    name: "Firebase",
-  },
-  // {
-  //   id: "npm",
-  //   name: "npm",
-  // },
-  {
-    id: "pnpm",
-    name: "pnpm",
+    id: "github",
+    name: "Github",
   },
   {
-    id: "yarn",
-    name: "yarn",
+    id: "postman",
+    name: "Postman",
   },
   {
     id: "figma",
     name: "Figma",
   },
-  // {
-  //   id: "photoshop",
-  //   name: "Photoshop",
-  // },
-  // {
-  //   id: "illustrator",
-  //   name: "Illustrator",
-  // },
+  {
+    id: "photoshop",
+    name: "Photoshop",
+  },
+  {
+    id: "illustrator",
+    name: "Illustrator",
+  },
   {
     id: "notion",
     name: "Notion",
   },
-  // {
-  //   id: "trello",
-  //   name: "Trello",
-  // },
+  {
+    id: "trello",
+    name: "Trello",
+  },
 ] as const;

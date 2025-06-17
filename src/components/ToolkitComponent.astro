@@ -8,10 +8,12 @@ const t = useTranslations(lang);
 
 import { SKILLS } from "@/consts/skills";
 
-const firstCard = SKILLS.slice(0, 6);
-const secondCard = SKILLS.slice(6, 14);
-const thirdCard = SKILLS.slice(14, 19);
-const fourthCard = SKILLS.slice(19, 25);
+const firstCard = SKILLS.slice(0, 8);
+const secondCard = SKILLS.slice(8, 16);
+const thirdCard = SKILLS.slice(16, 22);
+const fourthCard = SKILLS.slice(22, 27);
+const fifthCard = SKILLS.slice(27, 32);
+const sixthCard = SKILLS.slice(32, 38);
 ---
 
 <section class='w-full lg:w-8/12 2xl:w-6/12 mx-auto px-4'>
@@ -27,7 +29,9 @@ const fourthCard = SKILLS.slice(19, 25);
         {
           firstCard.map(({ id, name }) => (
             <li>
-              <i class={`devicon-${id}-plain colored`} />
+              <i
+                class={`devicon-${id}-plain ${id === "less" ? `devicon-${id}-plain-wordmark colored` : `devicon-${id}-plain colored`}`}
+              />
               {name}
             </li>
           ))
@@ -56,13 +60,53 @@ const fourthCard = SKILLS.slice(19, 25);
       class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
     >
       <header>
-        <h2 class='font-medium text-xl'>{t("skills.clouds")}</h2>
+        <h2 class='font-medium text-xl'>Backend & Runtime</h2>
       </header>
       <ul class='pt-4'>
         {
           thirdCard.map(({ id, name }) => (
             <li>
-              <i class={`devicon-${id}-plain colored`} />
+              <i
+                class={`devicon-${id}-plain ${id === "express" || "mongoose" ? `devicon-${id}-original colored` : `devicon-${id}-plain colored`}`}
+              />
+              {name}
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+    <article
+      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
+    >
+      <header>
+        <h2 class='font-medium text-xl'>Build Tools & Bundlers</h2>
+      </header>
+      <ul class='pt-4'>
+        {
+          fourthCard.map(({ id, name }) => (
+            <li>
+              <i
+                class={`devicon-${id}-plain ${id === "npm" ? `devicon-${id}-original-wordmark colored` : `devicon-${id}-plain colored`}`}
+              />
+              {name}
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+    <article
+      class='bg-transparent-white border border-gray-300 rounded-lg pt-3 pb-4 px-5'
+    >
+      <header>
+        <h2 class='font-medium text-xl'>{t("skills.clouds")}</h2>
+      </header>
+      <ul class='pt-4'>
+        {
+          fifthCard.map(({ id, name }) => (
+            <li>
+              <i
+                class={`devicon-${id}-plain ${id === "notion" ? "" : "colored"}`}
+              />
               {name}
             </li>
           ))
@@ -77,7 +121,7 @@ const fourthCard = SKILLS.slice(19, 25);
       </header>
       <ul class='pt-4'>
         {
-          fourthCard.map(({ id, name }) => (
+          sixthCard.map(({ id, name }) => (
             <li>
               <i
                 class={`devicon-${id}-plain ${id === "notion" ? "" : "colored"}`}

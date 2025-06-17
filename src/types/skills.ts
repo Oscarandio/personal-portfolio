@@ -2,6 +2,7 @@ type skillId =
   | "html5"
   | "css3"
   | "sass"
+  | "less"
   | "markdown"
   | "javascript"
   | "typescript"
@@ -14,11 +15,16 @@ type skillId =
   | "vitejs"
   | "webpack"
   | "redux"
+  | "reactrouter"
   | "github"
   | "git"
   | "vercel"
   | "netlify"
   | "cloudflare"
+  | "nodejs"
+  | "express"
+  | "mongodb"
+  | "mongoose"
   | "supabase"
   | "firebase"
   | "npm"
@@ -28,13 +34,15 @@ type skillId =
   | "photoshop"
   | "illustrator"
   | "notion"
-  | "trello";
-  
+  | "trello"
+  | "axios"
+  | "postman"
 
 type skillName =
   | "Html"
   | "CSS"
   | "Sass"
+  | "Less"
   | "Markdown"
   | "Javascript"
   | "Typescript"
@@ -47,11 +55,16 @@ type skillName =
   | "Vite"
   | "Webpack"
   | "Redux"
+  | "React Router"
   | "Git"
   | "Github"
   | "Vercel"
   | "Netlify"
   | "Cloudflare"
+  | "Node.js"
+  | "Express"
+  | "MongoDB"
+  | "Mongoose"
   | "Supabase"
   | "Firebase"
   | "npm"
@@ -61,8 +74,9 @@ type skillName =
   | "Photoshop"
   | "Illustrator"
   | "Notion"
-  | "Trello";
- 
+  | "Trello"
+  | "Axios"
+  | "Postman"
 
 export interface Skills {
   id: skillId;
