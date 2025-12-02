@@ -17,7 +17,7 @@ export const ui = {
     "nav.contact": "Contact",
 
     "hero.desc":
-      "With 2+ years of experience building performant, scalable, and responsive web interfaces. Specialized in React, Next.js and modern UI frameworks. Passionate about clean code, UX and delivering solutions that make an impact. Eager to contribute to ambitious projects with creativity, precision, and technical rigor.",
+      "With 3+ years of experience building performant, scalable, and responsive web interfaces. Specialized in React, Next.js and modern UI frameworks. Passionate about clean code, UX and delivering solutions that make an impact. Eager to contribute to ambitious projects with creativity, precision, and technical rigor.",
     "hero.job": "Front-end Developer · Specialized in React & Next.js",
     "hero.link": "Would you like to check some of my featured work? Go for it!",
 
@@ -26,6 +26,8 @@ export const ui = {
     "skills.clouds": "Cloud & Deployment",
     "skills.tools": "Tools",
 
+    "project.bcnrunhub.description":
+      "A website to find Social Running Clubs in Barcelona, built with Astro, React, Typescript and Tailwind. A fast, modern site to discover groups, events and running plans across the city.",
     "project.tubookbuddy.description":
       "TuBookBuddy is a web platform designed for book lovers, where users can easily discover, organize, and share books. Developed with Next.js and styled with TailwindCSS, the app offers a fast and fluid experience.",
     "project.vilatijolo.description":
@@ -57,7 +59,7 @@ export const ui = {
     "nav.contact": "Contact",
 
     "hero.desc":
-      "Développeur front-end avec plus de deux ans d'expérience dans la création d'interfaces web performantes, évolutives et réactives. Spécialisé en React, Next.js et les frameworks d'interface utilisateur modernes. Passionné par le code propre, l'expérience utilisateur (UX) et la création de solutions percutantes, je souhaite contribuer à des projets ambitieux avec créativité, précision et rigueur technique.",
+      "Développeur front-end avec plus de 3 ans d'expérience dans la création d'interfaces web performantes, évolutives et réactives. Spécialisé en React, Next.js et les frameworks d'interface utilisateur modernes. Passionné par le code propre, l'expérience utilisateur (UX) et la création de solutions percutantes, je souhaite contribuer à des projets ambitieux avec créativité, précision et rigueur technique.",
     "hero.job": "Développeur front-end · Spécialisé en React et Next.js",
     "hero.link": "Envie de découvrir mes projets? N'hésitez pas!",
 
@@ -66,6 +68,8 @@ export const ui = {
     "skills.clouds": "Clouds & Deployment",
     "skills.tools": "Outils",
 
+    "project.bcnrunhub.description":
+      "Annuaire des Social Running Clubs à Barcelone, réalisé avec Astro, React et Tailwind. Un site moderne et rapide pour découvrir des groupes, des événements et des plans de running dans la ville.",
     "project.tubookbuddy.description":
       "TuBookBuddy est une plateforme Web conçue pour les amateurs de livres, où les utilisateurs peuvent facilement découvrir, organiser et partager des livres. Propulsée par Next.js et conçue avec TailwindCSS, l'application offre une expérience rapide et fluide.",
     "collaborations.title": "Collaborations en vedette",
@@ -98,10 +102,12 @@ export const ui = {
     "nav.contact": "Contacto",
 
     "hero.desc":
-      "Desarrollador frontend con más de 2 años de experiencia en la creación de interfaces web de alto rendimiento, escalables y responsivas. Especializado en React, Next.js y frameworks de interfaz de usuario modernos. Apasionado por el código limpio, la experiencia de usuario (UX) y la creación de soluciones impactantes. Con ganas de contribuir a proyectos ambiciosos con creatividad, precisión y rigor técnico.",
+      "Desarrollador frontend con más de 3 años de experiencia en la creación de interfaces web de alto rendimiento, escalables y responsivas. Especializado en React, Next.js y frameworks de interfaz de usuario modernos. Apasionado por el código limpio, la experiencia de usuario (UX) y la creación de soluciones impactantes. Con ganas de contribuir a proyectos ambiciosos con creatividad, precisión y rigor técnico.",
     "hero.job": "Frontend Developer · Especializado en React y Next.js",
     "hero.link": "¿Te gustaría ver algunos de mis trabajos destacados?",
 
+    "project.bcnrunhub.description":
+      "Una web para encontrar Social Running Clubs en Barcelona, creado con Astro, React, Typescript y Tailwind. Una web rápida y moderna para descubrir grupos, eventos y planes de running en la ciudad.",
     "project.tubookbuddy.description":
       "TuBookBuddy es una plataforma web diseñada para amantes de la lectura, donde los usuarios pueden descubrir, organizar y compartir libros de manera sencilla. Desarrollada con Next.js y estilizada con TailwindCSS, la aplicación ofrece una experiencia rápida y fluida.",
     "collaborations.title": "Colaboraciones destacadas",
